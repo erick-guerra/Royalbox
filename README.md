@@ -1,5 +1,5 @@
 # ROYALBOX
-Turn your Raspberry Pi into a Roku + Chromecast streaming device for iOS Users
+Turn your Raspberry Pi into a Roku + Chromecast streaming device for iOS Users + Dashboard with weather, time, news feed.  You can embedded any dashboard you like.
 
 Royalbox allows you to stream m3u8, mp4 videos from the web directly to your TV using the iOS app.  It can cast videos embedded in web pages, live stream, etc. to your TV with iOS App and the Raspberry Pi connected TV.
 
