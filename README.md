@@ -30,5 +30,7 @@ After installing Rasap-Webgui you need to replace additional file and make addit
 1)
 
 Use the iOS app to Stream to Royalbox
-https://itunes.apple.com/us/app/royalbox-control-center-home/id1450861330?mt=8
+
+<a href="https://itunes.apple.com/us/app/royalbox-control-center-home/id1450861330?mt=8"><img src="images/githawk-pulse.gif" /></a>
+<p align="center"><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png" width="250" /></a></p>
 
