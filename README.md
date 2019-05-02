@@ -14,12 +14,23 @@ Royalbox allows you to stream m3u8, mp4 videos from the web directly to your TV 
 The project is built on 2 other projects from Github and some additional customization for the purpose of creating the Royalbox.
 
 Streaming Engine - https://github.com/blissland/blissflixx
+
 Wifi Configuration - https://github.com/billz/raspap-webgui
 
-Blissflixx hasn't been updated for a while.  Please use the "configure.sh" file that is in the project 
+Login into your Raspberry Pi
+
+cd Downloads
+git clone https://github.com/omody/Royalbox.git
+
+
+Blissflixx hasn't been updated for a while.  
+
 git clone https://github.com/blissland/blissflixx.git
 cd blissflixx
-COPY THE configure.sh from this repository and replace the out dated one.
+
+COPY THE UPDATE FILES FROM THIS REPORSITORY AND REPLACE THE FILES YOU CLONED PREVIOUSLY
+
+chmod +x configure.sh
 sudo ./configure.sh
 
 Raspap-Webgui - Installation can be used as it.  The modification will be later described.
@@ -27,7 +38,14 @@ wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
 
 After installing Rasap-Webgui you need to replace additional file and make additional modification
 
-1)
+sudo mv /var/www/html /var/www/html_old
+sudo mv ~/Downloads/Royalbox/config.json /var/www
+sudo mv ~/Downloads/Royalbox/serial_num.txt /var/wwww
+sudo mv ~/Downloads/Royalbox/html /var/www/html
+chmod -R www-data:www-data /var/www
+
+
+
 
 Use the iOS app to Stream to Royalbox
 
