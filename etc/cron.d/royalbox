@@ -1,0 +1,2 @@
+# Copy screen on/off settings
+*/5 * * * * root cat /var/www/hdmi > /etc/cron.d/hdmi
