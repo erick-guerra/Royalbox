@@ -60,9 +60,11 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 -------------------------------------------------------------------------------------------------------------------------
 # PRE-CONFIGURED IMG FILE
 
+**In Progress***
+I am working on this
 
 -------------------------------------------------------------------------------------------------------------------------
-# HOW TO BUILD - DO IT YOURSELF
+# HOW TO BUILD - DO IT YOURSELF - In progress
 
 **NOTE**:  This process modifies the filesystem and therefore should be used at own risk.
 
