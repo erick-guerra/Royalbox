@@ -35,7 +35,7 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 **TABLET/COMPUTER/MOBILE SETUP SCREEN**
 <p alight="center">
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_headless.png" width="250" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_headless_iphone.png" width="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_headless_iphone.png" height="250" />
 </p>
 
 **CASTING TO TV**
