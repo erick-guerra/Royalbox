@@ -1,0 +1,22 @@
+html{overflow:hidden;}
+
+.holder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%
+  height: 10%;
+}
+
+  

@@ -1,0 +1,7 @@
+disable_overscan=1
+framebuffer_depth=24
+gpu_mem=192
+hdmi_force_hotplug=1
+dtparam=audio=on
+display_rotate=0
+

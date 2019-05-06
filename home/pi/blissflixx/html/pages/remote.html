@@ -1,0 +1,105 @@
+<remote>
+	<div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-6 col-xl-6"><button onclick={ doMinus30 } type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-backward"></i> 30 SECS</button></div>
+              <div class="col-xs-6 col-xl-6"><button onclick={ doPlus30 } type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-forward"></i> 30 SECS</button></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-xl-6"><button onclick={ doMinus600 } type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-fast-backward"></i> 10 MINS</button></div>
+              <div class="col-xs-6 col-xl-6"><button onclick={ doPlus600 } type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-fast-forward"></i> 10 MINS</button></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-xl-6"><button onclick={ doSubMinus } type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-comment"></i> -250 MS</button></div>
+              <div class="col-xs-6 col-xl-6"><button onclick={ doSubPlus } type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-comment"></i> +250 MS</button></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-xl-6"><button onclick={ doVoldown } type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-volume-down"></i> VOL DOWN</button></div>
+              <div class="col-xs-6 col-xl-6"><button onclick={ doVolup } type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-volume-up"></i> VOL UP</button></div>
+            </div>
+            <div class="row">
+              <div show={ !status.Paused } class="col-xs-6 col-xl-6"><button onclick={ pause } type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-pause"></i> PAUSE</button></div>
+              <div show={ status.Paused } class="col-xs-6 col-xl-6"><button onclick={ pause } type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-play"></i> PLAY</button></div>
+              <div class="col-xs-6 col-xl-6"><button onclick={ stop } type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-stop"></i> STOP</button></div>
+            </div>
+         </div>
+  <script>
+    var self = this
+
+this.on('mount', function() {
+      self.status = playerStore.getStatus()
+      RiotControl.on('se_status_changed', self.updateStatus)
+    })
+
+    this.on('unmount', function() {
+      RiotControl.off('se_status_changed')
+    })
+
+    updateStatus() {
+      self.status = playerStore.getStatus()
+      if (!self.status.Error) self.errorClosed = false
+      if (self.showing && !self.status.State) self.hideRemote()
+      self.update()
+    }
+
+    closeError() {
+      self.errorClosed = true
+      self.update()
+    }
+
+    control(action) {
+      playerStore.control(action, function(err) {
+        if (err) return Utils.showError(err)
+      })
+    }
+
+    doSubMinus(e) {
+      self.doAction('subminus')
+    }
+
+    doSubPlus(e) {
+      self.doAction('subplus')
+    }
+
+    doMinus30(e) {
+      self.doAction('minus30')
+    }
+
+    doPlus30(e) {
+      self.doAction('plus30')
+    }
+
+   doMinus600(e) {
+      self.doAction('minus600')
+    }
+
+    doPlus600(e) {
+      self.doAction('plus600')
+    }
+
+    doVolup(e) {
+      self.doAction('volup')
+    }
+
+    doVoldown(e) {
+      self.doAction('voldown')
+    }
+
+    doAction(action) {
+      playerStore.control(action, function() {})
+    }
+
+    stop() {
+      self.control('stop')
+      self.hideRemote()
+    }
+
+    pause() {
+      self.control('pause')
+    }
+
+    resume() {
+      self.control('resume')
+    }
+
+  </script>
+</remote>

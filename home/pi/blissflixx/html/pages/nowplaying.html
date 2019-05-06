@@ -1,0 +1,30 @@
+<nowplaying>
+  <playerr show={ status.Error && !errorClosed } status={ status } ></playerr>
+
+  <div show={ status.State > -1} class="navibar playnav">
+    <div class="container">
+      <ul class="navitems navitems-left">
+        <li>
+          <span class="truncate">
+            <i show={ status.State > 0 && status.State < 3 } class="fa fa-circle-o-notch fa-spin" style="color:white"></i>
+            <i show={ status.State == 3 } class="fa fa-play-circle-o" style="color:white"></i> { status.Title }
+          </span>
+        </li>
+      </ul>
+      <ul class="navitems navitems-right">
+        <li show={ status.State > 0 }>
+          <a href="" onclick={ stop }><i class="fa fa-stop" style="color:white"></i></a>
+        </li>
+        <li show={ !status.Paused && status.State == 3 }>
+          <a href="" onclick={ pause }><i class="fa fa-pause" style="color:white"></i></a>
+        </li>
+        <li show={ status.Paused && status.State == 3 }>
+          <a href="" onclick={ resume }><i class="fa fa-play" style="color:white"></i></a>
+        </li>
+        <li show={ status.State == 3 }>
+          <a href="" onclick={ showRemote }><i class="fa fa-tv" style="color:white"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nowplaying>

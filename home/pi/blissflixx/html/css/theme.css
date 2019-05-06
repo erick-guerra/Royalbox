@@ -1,0 +1,214 @@
+/* Font */
+@font-face {
+    font-family:'Helvetica-lt';
+    src: url('../fonts/Helvetica-lt.eot');
+    src: url('../fonts/Helvetica-lt.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Helvetica-lt.woff') format('woff'),
+         url('../fonts/Helvetica-lt.ttf') format('truetype'),
+         url('../fonts/Helvetica-lt.svg#Helvetica-lt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+ * Global defaults
+ */
+body {
+  /*font-family: 'Roboto', sans-serif; */
+  color: #FFFFFF;
+  background-color: #202020;
+}
+
+a, a:hover, a:visited {
+  color: #FFFFFF;
+}
+
+hr {
+  border-top: 2px ridge rgba(67, 98, 129, 0.6);
+}
+
+.error-msg {
+  color: #A94442;
+}
+
+a.underline {
+  text-decoration: underline;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-content {
+  background-color: #4C7488;
+}
+
+/*
+ * Top navbar
+ */
+.topnav {
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+  background-color: rgb(22, 22, 22);
+  border: none;
+  font-weight: bold;
+}
+
+.topnav .navitems>li>a:hover {
+  color: #2A435A;
+  background-color: #FFFFFF;
+}
+
+
+/*
+ * Player navbar
+ */
+.playnav {
+  background-color: #202020;
+  color: #FFFFFF;
+}
+
+.playnav .navitems>li>a {
+  color: #333;
+}
+
+.playnav .navitems>li>a:hover {
+  background-color: #202020;
+}
+
+.playnav .navitems>li>a.close:hover {
+  background-color: #F8F8F8;
+}
+
+/* 
+ * Channels
+ */
+.channel-logo {
+  border-radius: 0px;
+}
+
+
+/* Search box eye glass */
+.right-inner-addon i {
+  color: rgb(51, 51, 51);
+}
+
+/* Channel feed list */
+.channel-feeds .dot-sep {
+ color: #90B8DD;
+}
+
+.channel-feeds a.selected {
+  background-color: rgb(52, 152, 219);
+  border-radius: 0px;
+}
+
+/* item list */
+.item-row a:hover {
+  text-decoration: underline;
+}
+
+.item-img {
+  border-radius: 0px;
+}
+
+.item-subtitle, .item-subtitle a {
+  /*color: #90B8DD; */
+}
+
+a.item-action {
+  border-color: #FFFFFF;
+  border: 1px solid #A9A9A9;
+  text-decoration: none;
+}
+
+a.item-action:hover {
+  border: 1px solid #FFFFFF;
+  text-decoration: none;
+}
+
+/*
+ * More episodes/torrent files 
+ */
+.showmore-title {
+  font-size: 25px;
+}
+
+/* 
+ * Popovers
+ */
+.webui-popover {
+  background-color: #4C7488;
+}
+
+/*
+ * All this to change arrow color ;-(
+ */
+.webui-popover.top > .arrow:after,
+.webui-popover.top-right > .arrow:after,
+.webui-popover.top-left > .arrow:after {
+  border-top-color: #4C7488;
+}
+
+.webui-popover.right > .arrow:after,
+.webui-popover.right-top > .arrow:after,
+.webui-popover.right-bottom > .arrow:after {
+  border-right-color: #4C7488;
+}
+
+.webui-popover.bottom > .arrow:after,
+.webui-popover.bottom-right > .arrow:after,
+.webui-popover.bottom-left > .arrow:after {
+  border-bottom-color: #4C7488;
+}
+
+.webui-popover.left > .arrow:after,
+.webui-popover.left-top > .arrow:after,
+.webui-popover.left-bottom > .arrow:after {
+  border-left-color: #4C7488;
+}
+
+.video {
+    width: 100%;
+    border: 1px solid black;
+}
+.wrapper{
+    display:table;
+    width:auto;
+    position:relative;
+    width:50%;
+}
+.playpause {
+    background-image:url(http://png-4.findicons.com/files/icons/2315/default_icon/256/media_play_pause_resume.png);
+    background-repeat:no-repeat;
+    width:50%;
+    height:50%;
+    position:absolute;
+    left:0%;
+    right:0%;
+    top:0%;
+    bottom:0%;
+    margin:auto;
+    background-size:contain;
+    background-position: center;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,95 @@
+<app2>
+    <div class="holder" style="width:100%;height:100%';margin:0;padding:0;border:none">
+    <!-- <iframe id="if_link" class="frame" src="http://www.gplexdb.net/app/app.html" style="width:100%;height:100%;margin:0;padding:0;border:none" seamless="seamless"> -->
+    <iframe name="if_link" id="if_link" src={ dashboardURL } class="frame" style="width:100%;height:100%;margin:0;padding:0;border:none" seamless="seamless"> 
+    Your browser doesn't support iframes
+</iframe>
+    <div class="bar"> 
+  <playbar2 class="rss-title bright" style=font-size:400%;font-weight:60;"></playbar2>
+    </div>
+    </div>
+
+  <script>
+    var self = this
+    self.mountedTag = null
+    self.loadedTags = {}
+
+    this.on('mount', function(page) {
+      self.bindCtrlKeys()
+      //self.loadPage(page)
+    })
+
+    loadPage(page) {
+      page = page || 'channels'
+      if (self.mountedTag) {
+	self.mountedTag.unmount()
+      }
+      if (!self.loadedTags[page]) {
+	riot.compile('pages/' + page + '.html', function() {
+	  self.loadedTags[page] = true
+	  self.mountPage(page)
+	})
+      } else {
+	self.mountPage(page)
+      }
+    }
+
+    mountPage(page) {
+      self.mountedTag = riot.mount('div#page', page)[0]
+    }
+
+    riot.route(function(page) {
+      self.loadPage(page)
+    })
+
+    bindCtrlKeys() {
+      $(document).keypress(function(e) {
+        var tag = e.target.tagName.toLowerCase(e)
+        if (tag == 'input' || tag == 'textarea') return
+        var status = playerStore.getStatus()
+        if (status.State < 3) return
+        var action = null
+        switch (e.which) {
+          case 32:
+          case 80:
+          case 112:
+            action = status.Paused ? 'resume' : 'pause'
+            break
+          case 44:
+          case 60:
+            action = 'minus30'
+            break
+          case 46:
+          case 62:
+            action = 'plus30'
+            break
+          case 90:
+          case 122:
+            action = 'minus600'
+            break
+          case 88:
+          case 120:
+            action = 'plus600'
+            break
+          case 49:
+            action = 'subminus'
+            break
+          case 50:
+            action = 'subplus'
+            break
+          case 45:
+            action = 'voldown'
+            break
+          case 61:
+            action = 'volup'
+            break
+
+        }
+        if (action) {
+          playerStore.control(action, function() {})
+          e.preventDefault()
+        }
+      })
+    }
+  </script>
+</app2>

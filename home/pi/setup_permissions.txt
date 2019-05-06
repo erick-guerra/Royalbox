@@ -1,0 +1,10 @@
+sudo chmod 777 /etc/dhcpcd.conf
+sudo chown -R www-data:www-data /var/www/html
+sudo chown www-data:www-data /etc/wpa_supplicant/wpa_supplicant.conf
+sudo chmod 777 /etc/wpa_supplicant/wpa_supplicant.conf
+sudo chmod +x /home/pi/rpi-hdmi.sh
+sudo chmod +x /home/pi/scripts/startup.sh
+sudo chmod +x /home/pi/scripts/connect_to_wifi_royalbox.sh
+sudo chmod +x /home/pi/scripts/dhcp_rebooter.sh
+sudo chmod +x /home/pi/scripts/start_bliss.sh
+sudo chmod +x /home/pi/scripts/nightly_reboot.sh

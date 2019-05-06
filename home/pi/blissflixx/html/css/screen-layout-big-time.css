@@ -1,0 +1,358 @@
+#big-time-container {
+    position: fixed;
+    z-index: 20;
+    padding-top: 8%;
+    width: 80%;
+    padding-left: 10%;
+}
+
+/* </= 900 */
+
+@media (max-width: 900px) {
+    #big-time-container {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+/**
+ * Photo-related classes
+ * ---------------------------------------- */
+
+/**
+ *  Event classes/colors
+ * ---------------------------------------- */
+
+.events {
+    margin-top: 1em;
+}
+
+#events-table {
+    height: 100%;
+}
+
+#events-table td {
+    padding: 15px;
+    vertical-align: top;
+}
+
+.events tbody td {
+    vertical-align: top;
+}
+
+.layout-portrait .events .day-container {
+    padding: 15px 0 0 15px;
+}
+
+.layout-portrait .events {
+    margin-bottom: 20px;
+}
+
+.layout-landscape .events {
+    overflow: hidden;
+}
+
+.events .day-container {
+    margin-top: 20px;
+    /*padding-top: 20px; */
+    padding-left: 15px;
+}
+
+.events .event-description {
+    margin-left: 66px;
+}
+
+.events .time-container {
+    float: left;
+    padding-right: 10px;
+    width: 56px;
+}
+
+.events .hour {
+    float: right;
+    /*color: #fff;*/
+    letter-spacing: -3px;
+}
+
+.events .minute-container {
+    line-height: .8em;
+    padding-top: .45em;
+    padding-left: 5px;
+    float: right;
+    font-size: .5em;
+    /*color: rgba(255,255,255,0.8);*/
+}
+
+.events .minute {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.events .ampm {
+    font-size: .8em;
+    text-transform: uppercase;
+}
+
+.events li {
+    color: #fff;
+}
+
+.events li.red {
+    color: #ffc1c1;
+}
+
+.events li.red-bright {
+    color: #ff4f4f;
+}
+
+.events li.orange {
+    color: #ffd5a9;
+}
+
+.events li.orange-bright {
+    color: #ffb04f;
+}
+
+.events li.yellow {
+    color: #fff3a3;
+}
+
+.events li.yellow-bright {
+    color: #fcff4f;
+}
+
+.events li.green {
+    color: #c1ffa7;
+}
+
+.events li.green-bright {
+    color: #28e840;
+}
+
+.events li.teal {
+    color: #b8f3e3;
+}
+
+.events li.teal-bright {
+    color: #27e8d8;
+}
+
+.events li.blue {
+    color: #aae0fc;
+}
+
+.events li.blue-bright {
+    color: #68baff;
+}
+
+.events li.purple {
+    color: #c1c8ff;
+}
+
+.events li.pink {
+    color: #ffc9fe;
+    ;
+}
+
+.events li.pink-bright {
+    color: #fd79ff;
+}
+
+.events .location {
+    font-size: .65em;
+    line-height: 1.2em;
+    display: block;
+    opacity: .8;
+}
+
+.calmonth .location {
+    font-size: .85em;
+    line-height: 1.4em;
+}
+
+.events .end-time {
+    font-size: .65em;
+    line-height: 1.2em;
+    display: block;
+    opacity: .8;
+}
+
+.calmonth .end-time {
+    font-size: .85em;
+    line-height: 1.4em;
+}
+
+.calmonth th {
+    /*font-weight: 100;*/
+    text-align: left;
+    padding: 2px 5px;
+}
+
+.calmonth td {
+    vertical-align: top;
+    width: 14.2%;
+    /*padding: 0 3px;*/
+    padding: 1px 2px;
+}
+
+.calmonth .daybox {
+    min-height: 100px;
+    min-width: 100px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 3px;
+    word-break: break-word;
+}
+
+.calmonth .today {
+    border-top: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+@media only screen and (orientation: landscape) {
+    #calendar {
+        display: table;
+        width: 100%;
+    }
+    .day-container {
+        display: table-cell;
+    }
+}
+
+/**
+ * Weather styles
+ * ------------------------------------------------------ */
+
+.weather-forecast {
+    height: 78%
+}
+
+.weather-forecast-item {
+    height: 20%;
+    line-height: 1.8em
+}
+
+.weather-forecast-item-table {
+    display: table;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.weather-forecast-item-label {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.weather-forecast-item-icon {
+    display: table-cell;
+    padding-right: 10px;
+    vertical-align: middle
+}
+
+.weather-forecast-item-hilo {
+    display: table-cell;
+    padding-right: 15px;
+    line-height: 1.4em
+}
+
+.weather-item .day {
+    font-size: 85%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.weather-current {
+    margin-bottom: 20px;
+}
+
+.weather-container {
+    float: right;
+}
+
+.weather-forecast {
+    display: table-cell;
+    padding-left: 20px;
+}
+
+.weather-forecast .wi {
+    padding-bottom: 10px;
+}
+
+.weather-forecast-item-high,
+.weather-forecast-item-low {
+    margin: 0 5px;
+}
+
+.weather-forecast-5 {
+    /*display:none;*/
+}
+
+.weather-moon {
+    display: none;
+}
+
+.weather-pop {
+    color: #fff;
+    font-size: 70%;
+    margin-bottom: 1em;
+    margin-top: .5em;
+}
+
+/**
+ * RSS styles
+ * ------------------------------------------------------ */
+
+#rss {
+    margin-top: 1em;
+}
+
+.rss-description {
+    font-weight: 300;
+    font-size: .8em;
+}
+
+/**
+ * Message styles 
+ * ------------------------------------------------------ */
+
+#message {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+/**
+ * Todo styles 
+ * ------------------------------------------------------ */
+
+/**
+ * Clocks
+ * ------------------------------------------------------ */
+
+.time .sec {
+    font-size: .4em;
+    color: #fff;
+    padding-left: 5px;
+    position: relative;
+    top: -1.1em;
+    font-weight: 300;
+}
+
+.time-ampm {
+    font-size: .3em;
+    color: rgba(255, 255, 255, 0.8);
+    padding-left: 5px;
+    position: relative;
+    font-weight: 300;
+}
+
+.analog-circle {
+    width: 10em;
+    height: 10em;
+    margin: 0 0 15px 0;
+    position: relative;
+    border: .25em solid #fff;
+    border-radius: 50%;
+}

@@ -1,0 +1,322 @@
+/*
+ * Global layouts
+ */
+body {
+  padding-top: 70px;
+  padding-bottom: 60px;
+  font-size: 18px;
+}
+
+a, a:1over, a:active, a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Stop channels wrapping problem on xs screens */
+.xs-wrap-fix {
+  display:inline-block; 
+  float:none; 
+}
+
+/* Stop firefox putting a red border around invalid text fields */
+input:invalid {
+  box-shadow: none;
+} 
+
+/* Break long words */
+.break-long-word {
+  word-wrap: break-word;   
+  overflow-wrap: break-word; 
+}
+
+.centre-text {
+  text-align:center;
+}
+
+/* Truncate playing title */
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Bootstrap buttons */
+.btn {
+  font-size: 16px;
+}
+
+/*
+ * Common navbar
+ */
+.navibar {
+  position: fixed;
+  left: 0;
+  z-index: 1000;
+  height: 50px;
+  width: 100%;
+}
+
+.navibarplayer {
+  position: fixed;
+  left: 0;
+  z-index: 1000;
+  height: 10%;
+  width: 100%;
+}
+
+
+
+.navitems-left,
+.navitems-left>li,
+.navitems-left>li>a,
+.navitems-left>li>span {
+  float: left; 
+}
+
+.navitems-right,
+.navitems-right>li,
+.navitems-right>li>a,
+.navitems-right>li>span {
+  float: right; 
+}
+
+.navitems>li>a, .navitems>li>span {
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 24px;
+}
+
+
+ul.navitems {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.playnav ul.navitems-left {
+  width: 43%;  /* Max width for iphone */
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) { 
+  .playnav ul.navitems-left {
+    width: 50%;  
+  }
+}
+
+@media only screen and (min-width: 992px) { 
+  .playnav ul.navitems-left {
+    width: 80%;  
+  }
+}
+
+ul.navitems-left>li {
+  width: 100%;
+}
+
+
+/*
+ * Top navigation bar
+ */
+.topnav {
+  top: 0;
+}
+
+/* Maximum padding for small screens (width 320) is 8 px */
+.topnav .navitems>li>a>i {
+  padding: 0px 8px;
+}
+
+/*
+ * Player navigation bar
+ */
+.playnav {
+  bottom: 0;
+}
+
+.playnav .navitems>li>a>i {
+  padding: 0px 15px;
+}
+
+/*
+ * Channels
+ */
+.channel {
+  margin-bottom: 30px;
+}
+
+.channel-logo {
+  width: 100%;
+}
+
+.channel-title {
+  margin-top: 0px;
+}
+
+.channel p {
+  text-align: center;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}
+
+/*
+ * Channel search box eye glass
+ */
+.right-inner-addon {
+  position: relative;
+}
+
+.right-inner-addon input {
+  padding-right: 30px;    
+  padding-left: 20px;    
+  border-radius: 20px;
+}
+
+.right-inner-addon i {
+  font-size: 14px;
+  position: absolute;
+  right: 0px;
+  padding: 10px 12px;
+  pointer-events: none;
+}
+
+/*
+ * Channel feed list
+ */
+.channel-feeds {
+  margin-top: 15px;
+}
+
+.channel-feeds a {
+  font-size: 18px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.channel-feeds a.selected {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* item list */
+.item-list-msg {
+  font-size:18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.item-list-title {
+  font-size: 36px;
+  margin-bottom: -10px;
+}
+
+.item-img {
+  max-height: 100%;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.item-icon {
+  width: 100%;
+}
+
+/*
+.item-icon {
+  width: 100%;
+  margin-top: -10px; 
+}
+*/
+
+.item-title {
+  font-size: 20px;
+  /*line-height: 25px;*/
+  margin-left: 2px;
+  margin-top: 2px;
+  color: #d3d3d3;
+}
+
+.item-synopsis {
+  font-size: 24px;
+  margin-left: 2px;
+  color: #928556;
+}
+
+.item-subtitle {
+  font-size: 14px;
+  margin-left: 2px;
+  margin-top: 2px;
+  color: #928556;
+}
+
+a.item-action {
+  padding: 2px 5px;
+  margin-right: 10px; 
+  margin-bottom: 5px;
+  margin-top: 8px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.item-overlay {
+  height: 33%;
+  width: 97%;
+  background-color: rgba(0, 0, 0, 0.71);
+  position: absolute;
+  top: 67%;
+  left: 100;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+}
+
+.item-pause {
+  height: 70px;
+  width: 70px;
+  background-image: url("../img/icons/music_play_button.svg ");
+  background-size: cover;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+
+
+/* Buttons */
+.btn-spacer-right {
+  margin-right: 10px;
+}
+
+#yes-button, #no-button {
+  margin-top: 5px
+}
+
+/* Playlist edit */
+.move-item {
+  margin-top: 5px;
+  font-size: 36px;
+}
+
+/* New playlist button */
+.new-playlist {
+  vertical-align: text-top;
+}
+
+/* Play URL page */
+.play-title {
+  text-align:center;
+  font-size: 36px;
+}
+
+/* Settings */
+.btn-lg {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,249 @@
+<itemlist>
+  <div hide={ opts.items } class="item-list-msg">
+    <i class="fa fa-spinner fa-spin"></i> { opts.wait }
+  </div>
+  <div class="item-list-msg" show={ opts.items && opts.items.length == 0 }>{ opts.empty }</div>
+  <div show={ opts.items && opts.items.length > 0 }>
+    <div each={ opts.items }>
+      <div class="item-row row">
+        <div class="col">
+          <div class="thumbnail">
+            <img class={ item-icon: parent.isIcon(img), item-img: !parent.isIcon(img) } src={ img }>
+            <div class="item-title"><raw content={ title } /></div>
+            <div class="item-subtitle"><raw content={ subtitle } /></div>
+            <div class="item-synopsis"><raw content={ synopsis } /></div>
+            <u><a href="" onfocus="this.blur()" onclick={ parent.openItem }>Play on TV</a></u><br/><br/>
+ 	    <div style="display:none" id="spinnerTV"><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Processing Video...</div>
+            <u><a href="" onfocus="this.blur()" onclick={ parent.showVideo }>Play on Device</a></u><br/><br/>
+            <span each={ actions }>
+                <a href="" onclick={ parent.parent.doAction } class="item-action"> { label }</a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+  <div>
+
+  <div class="modal" id="videoModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <button type="button" class="close" onclick={ hideVideo }><span>&times;</span></button> -->
+          <button class="btn" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <iframe id="videoframe" src="" style="width: 0; height: 0; border: 0; border: none; position: absolute;"></iframe>
+          <div class="container-fluid" id="accordion">
+            <div class="row">
+		<div id="spinner1"><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Processing Video...</div>
+                <div id="f_link" name="f_link" class="embed-responsive embed-responsive-16by9">
+                        <video muted controls class="embed-responsive-item">
+                                <source type="application/x-mpegURL">
+                        </video>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var self = this
+
+    isIcon(img) {
+      if (img) return img.lastIndexOf('/img/icons', 0) === 0 
+      return false
+    }
+
+    openItemOnDevice(e) {
+      /* Parent can override default openItem */
+      if (self.parent.openItem) {
+        self.parent.openItem(e)
+      } else {
+        var item = e.item
+        if (item.url.indexOf('search://') === 0) {
+          Utils.goRoute('search', item.url.substring(9))
+        } else if (item.url.indexOf('showmore://') === 0) {
+          var url = item.url.substring(11)
+          Utils.goRoute('showmore', item.chid, item.title, url)
+        } else {
+          $("#spinner1")[0].style.display = "block"
+          playerStore.playOnDevice(item.url, item.title, function(err,data) {
+            //if (err) return Utils.showError(err)
+            //if (data) return Utils.playVideo('iosvideo', data)
+            //self.f_link.source.value = data
+            //if (data) showVideo()
+            if (data) {
+	        var newdata = data.replace(/^(https:|)\/\//,'ffproxys://')
+                newdata = newdata.replace(/^(http:|)\/\//,'ffproxy://')
+                //$('#f_link video source').attr('src', data)
+                //$("#f_link video")[0].load()
+                //$("#f_link video")[0].autoplay = true
+                //setTimeout(function() {
+                //  $("#f_link video")[0].play()
+                //}, 5000);
+                //$("#videoframe").attr("src", data);
+	        if (newdata.indexOf("?") >= 0) {
+                  newdata = newdata + "&royalbox=1"
+                } else {
+                  newdata = newdata + "?royalbox=1"
+                }
+                newdata = newdata + "&thumbnail=" +  e.item.img + "&videotitle=" + e.item.title
+                $("#videoframe").attr("src", newdata)
+                $("#spinner1")[0].style.display = "none"
+            }
+          })
+        }
+      }
+    }
+
+    openItem(e) {
+      /* Parent can override default openItem */
+      if (self.parent.openItem) {
+        self.parent.openItem(e)
+      } else {
+        var item = e.item
+        if (item.url.indexOf('search://') === 0) {
+          Utils.goRoute('search', item.url.substring(9))
+        } else if (item.url.indexOf('showmore://') === 0) {
+          var url = item.url.substring(11)
+          Utils.goRoute('showmore', item.chid, item.title, url)
+        } else {
+          $("#spinnerTV")[0].style.display = "block"
+          playerStore.play(item.url, item.title, function(err) {
+            if (err) return Utils.showError(err)
+          })
+          $("#spinnerTV")[0].style.display = "none"
+        }
+      }
+    }
+
+    removeFromPlaylist(plid, item) {
+      /* Do not make user wait for delete */
+      var items = self.opts.items
+      for (i=0; i<items.length;i++) {
+        if (item === items[i]) {
+           self.opts.items = items.splice(i, 1)
+           self.update()
+           break
+        }
+      }
+      playlistStore.removeItem(plid, item, function(err) {
+        if (err) return Utils.showError(err)
+      })
+    }
+
+    addToPlaylist(plid, item) {
+      playlistStore.addItem(plid, item, function(err) {
+        if (err) return Utils.showError(err)
+      })
+    }
+
+    getItemForAction(action) {
+      for (i=0; i<opts.items.length; i++) {
+        var actions = opts.items[i].actions
+        if (!actions) continue
+        for (j=0; j<actions.length; j++) {
+          if (actions[j] === action) {
+            return opts.items[i]
+          }
+        }
+      }
+    }
+
+    doAction(e) {
+      var action = e.item
+      var item = self.getItemForAction(action)
+      switch (action.type) {
+      case 'playwithsubs':
+        var subs = item.subs
+        if (item.subs.series) {
+          Utils.goRoute('episubs', item.url, subs.series,
+                         subs.lang, subs.season, subs.episode)
+        } else if (item.subs.title) {
+          Utils.goRoute('moviesubs', item.url, subs.title,
+                         subs.lang, subs.year, subs.imdb)
+        } else {
+          Popovers.subsType(e, function(type) {
+            if (type === 'movie') {
+              Utils.goRoute('moviesubs', item.url, subs.title,
+                            subs.lang, subs.year, subs.imdb)
+            } else if (type === 'tv') {
+              Utils.goRoute('episubs', item.url, subs.series,
+                            subs.lang, subs.season, subs.episode)
+            }
+          })
+        }
+        break
+      case 'addplaylist':
+        Popovers.addToPlaylist(e, function(create, value) {
+          if (create) {
+            playlistStore.newPlaylist(value, function(err, playlist) {
+              if (err) return Utils.showError(err)
+              self.addToPlaylist(playlist.plid, item)
+            })
+          } else {
+            self.addToPlaylist(value, item)
+          }
+        })
+        break
+      case 'showmore':
+        Utils.goRoute('showmore', action.chid, action.title, action.link)
+        break
+      case 'torrfiles':
+        Utils.goRoute('torrfiles', action.title, action.link)
+        break
+      case 'delplaylist':
+        Popovers.areYouSure(e, function(yes) {
+          if (yes) {
+	    playlistStore.deletePlaylist(item.plid, function(err) {
+	      if (err) return Utils.showError(err)
+	    })
+          }
+        })
+        break
+      case 'delplaylistitem':
+        Popovers.areYouSure(e, function(yes) {
+          if (yes) {
+            self.removeFromPlaylist(item.playlist, item)
+          }
+        })
+        break
+      case 'editplaylist':
+        Utils.goRoute('playedit', 'playlist', item.plid)
+        break
+      case 'editplaylistitem':
+        Utils.goRoute('playedit', 'item', item.playlist, item.itemnum)
+        break
+      case 'disablechannel':
+        channelStore.toggleChannel(item.id, true, function(err) {
+	  if (err) return Utils.showError(err)
+        })
+        break
+      case 'enablechannel':
+        channelStore.toggleChannel(item.id, false, function(err) {
+	  if (err) return Utils.showError(err)
+        })
+        break
+      }
+    }
+
+    removeDialogStyle(e) {
+      $('#videoModal').removeAttr('style')
+      self.showing = false
+    }
+
+    showVideo(e) {
+      self.openItemOnDevice(e)
+      self.showing = true
+      $('#f_link video').attr('poster', e.item.img)
+      $('#videoModal').modal('show')
+      $('#videoModal').on('hide.bs.modal', self.removeDialogStyle)
+    }
+
+    hideVideo() {
+      $('#videoModal').modal('hide')
+    }
+  </script>
+</itemlist>

@@ -1,0 +1,11 @@
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xscreensaver -no-splash
+@point-rpi
+
+
+@xset s off
+@xset -dpms
+@xset s noblank
+@/home/pi/blissflixx/start.sh
+@chromium-browser --kiosk --window-position=0,0 --start-maximized --disable-notifications --noerrdialogs --incognito --start-fullscreen --no-first-run --fast --fast-start --disable-infobars --disable-features=TranlateUI --disable-extensions --app=http://localhost:6969/welcome.php 

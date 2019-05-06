@@ -1,0 +1,102 @@
+<moviesubs>
+  <div class="row break-long-word">
+    <span class="col-xs-12 item-list-title">
+      <span>Movie Subtitles</span>
+    </span>
+  </div>
+  <hr />
+  <form onsubmit={ play }>
+    <div class="row">
+      <div class="col-md-8 col-sm-9 col-xs-12">
+        <div class="form-group">
+          <label>Title:</label>
+          <input type="text" class="form-control" name="f_title" required autofocus>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-sm-4 col-xs-4">
+        <div class="form-group">
+          <label>Year:</label>
+          <input type="text" class="form-control" name="f_year">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-sm-4 col-xs-4">
+        <div class="form-group">
+          <label>IMDB ID:</label>
+          <input type="text" class="form-control" name="f_imdb">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-sm-4 col-xs-4">
+        <div class="form-group">
+          <label>Language:</label>
+          <select name="f_lang" class="form-control">
+            <option each={ langlist } value={ code } selected={ code == parent.lang }>{ name }</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-sm-9 col-xs-12">
+        <button onclick={ cancel } type="button" class="btn btn-default pull-right">Cancel</button>
+        <button type="submit" class="btn btn-default btn-spacer-right pull-right">Play</button>
+      </div>
+    </div>
+  </form>
+
+  <script> 
+   var self = this
+
+   this.langlist = [
+     {code:"bul", name:"Bulgarian"},
+     {code:"chi", name:"Chinese"},
+     {code:"hrv", name:"Croatian"},
+     {code:"dan", name:"Danish"},
+     {code:"dut", name:"Dutch"},
+     {code:"eng", name:"English"},
+     {code:"fin", name:"Finnish"},
+     {code:"fre", name:"French"},
+     {code:"ger", name:"German"},
+     {code:"ell", name:"Greek"},
+     {code:"hun", name:"Hungarian"},
+     {code:"ita", name:"Italian"},
+     {code:"mac", name:"Macedonian"},
+     {code:"pol", name:"Polish"},
+     {code:"por", name:"Portuguese"},
+     {code:"srp", name:"Serbian"},
+     {code:"slv", name:"Slovenian"},
+     {code:"spa", name:"Spanish"},
+    ]
+
+    this.on('mount', function() {
+      riot.route.exec(function(page, url, title, lang, year, imdb) {
+        self.url = decodeURIComponent(url)
+        self.f_title.value = Utils.decodeURI(title)
+        self.lang = Utils.decodeURI(lang)
+        self.f_year.value = Utils.decodeURI(year)
+        self.f_imdb.value = Utils.decodeURI(imdb)
+        self.update()
+      })
+    })
+
+    cancel() {
+      window.history.back()
+    }
+
+    play() {
+      title = self.f_title.value
+      year = self.f_year.value
+      lang = self.f_lang.value
+      imdb = self.f_imdb.value
+      subs = {'title':title, 'year':year, 'lang':lang, 'imdb':imdb}
+      playerStore.playWithSubs(self.url, title, subs, function(err) {
+        if (err) return Utils.showError(err)
+        window.history.back()
+      })
+    }
+  </script>
+</moviesubs>

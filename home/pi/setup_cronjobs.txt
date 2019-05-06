@@ -1,0 +1,7 @@
+*/3 * * * * /home/pi/scripts/wifi_rebooter.sh
+*/10 * * * * /home/pi/scripts/dhcp_rebooter.sh
+0 3 * * * /home/pi/scripts/nightly_reboot.sh
+0/5 * * * * /home/pi/scripts/start_bliss.sh
+0/15 * * * * /home/pi/scripts/startup.sh
+@reboot /home/pi/scripts/dhcp_rebooter.sh
+@reboot /home/pi/scripts/start_bliss.sh >> out.txt 2>&1

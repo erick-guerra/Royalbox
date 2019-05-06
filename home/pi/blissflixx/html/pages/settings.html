@@ -1,0 +1,24 @@
+<settings>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+      <a href="" onclick={ restart } type="button" class="btn btn-info btn-block btn-lg"><span class="glyphicon glyphicon-retweet"></span> RESTART </a>
+      <a href="" onclick={ shutdown } type="button" class="btn btn-info btn-block btn-lg"><span class="glyphicon glyphicon-off"></span> SHUTDOWN</a>
+    </div>
+  </div>
+
+  <script>
+    var self = this
+ 
+    restart() {
+      Utils.rpc('server', 'restart', null, function(err) {
+        if (err) return Utils.showError(err)
+      })
+    }
+
+    shutdown() {
+      Utils.rpc('server', 'shutdown', null, function(err) {
+        if (err) return Utils.showError(err)
+      })
+    }
+  </script>
+</settings>
