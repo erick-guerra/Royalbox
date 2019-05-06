@@ -1,8 +1,5 @@
 # ROYALBOX
-Turn your Raspberry Pi into a Roku + Chromecast streaming device for iOS Users + Dashboard with weather, time, news feed.  You can embedded any dashboard you like.
-
-Royalbox allows you to stream m3u8, mp4 videos from the web directly to your TV using the iOS app.  It can cast videos embedded in web pages, live stream, etc. to your TV with iOS App and the Raspberry Pi connected TV.
-
+Build and sell your own Raspberry Pi based streaming device.  Sell your own SD card loaded to convert any Raspberry Pi into a Chromecast/Roku like streaming device.  Or build your own Raspberry Pi CPU with pre-loaded software to use as a streaming stick.  With Headless setup (No keyboard or mouuse required to setup your streaming device) you can simply plug it in your TV and a use the on-screen configuration guide to setup. 
 
 # PREREQUISITES
 
@@ -11,19 +8,49 @@ Royalbox allows you to stream m3u8, mp4 videos from the web directly to your TV 
  - Television plugged into Raspberry Pi.
  - Computer, tablet or smartphone for controlling server.
  
+# CREDITS
+
 The project is built on 2 other projects from Github and some additional customization for the purpose of creating the Royalbox.
 
 Streaming Engine - https://github.com/blissland/blissflixx
 
 Wifi Configuration - https://github.com/billz/raspap-webgui
 
+-------------------------------------------------------------------------------------------------------------------------
+# HOW TO BUILD
+# THE BELOW STEPS WORK BUT PLEASE USE AT YOUR RISK.  I AM NOT RESPONSIBLE FOR ANY DAMAGE, MISINFORMAITON, OR ANY LOSS.  
+
+This repository has the full directory structure and files that were replaced/modified to build this device.  You will need to build this project once and then you can create and image of your Raspberry Pi and/or buy a SD card duplicator to sell your own SD cards or build your CPU's.
+
+
 Login into your Raspberry Pi
 
-cd Downloads
-git clone https://github.com/omody/Royalbox.git
+1) Clone the project
+
+pi@raspberrypi:~$ cd Downloads
+pi@raspberrypi:~$ git clone https://github.com/omody/Royalbox.git
+
+2) Move the home directory and replace your current home/pi directory
+pi@raspberrypi:~$ sudo mv ~/Downloads/home/* ~/home/.
+
+3) Now configure blissflixx
+pi@raspberrypi:~$ cd ~/blissflixx
+pi@raspberrypi:~$ sudo ./configure.sh
+
+This will take about 20 mins to rebuild on a Pi B+.
+
+4) Now lets do the headless setup, accept all the default suggestion
+
+pi@raspberrypi:~$ wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
+
+5) Now lets replace the headless configuration software that comes with our own custom one
+
+pi@raspberrypi:~$ sudo mv /var/www/html /var/www/html_old
+pi@raspberrypi:~$ sudo cp -r ~/Downloads/var/www /var/.
 
 
-Blissflixx hasn't been updated for a while.  
+
+
 
 git clone https://github.com/blissland/blissflixx.git
 cd blissflixx
