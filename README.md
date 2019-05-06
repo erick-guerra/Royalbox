@@ -1,4 +1,7 @@
-# ROYALBOX --- IN PROGRESS - DO NOT USE YET
+<a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/Royalbox/raw/master/var/www/html/img/royalbox-logo-color-horiz-light.png" /></a>
+<p align="center"><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png" width="250" /></a></p>
+
+# ROYALBOX
 Build and sell your own Raspberry Pi based streaming device.  Sell your own SD card loaded to convert any Raspberry Pi into a Chromecast/Roku like streaming device.  Or build your own Raspberry Pi CPU with pre-loaded software to use as a streaming stick.  With Headless setup (No keyboard or mouuse required to setup your streaming device) you can simply plug it in your TV and a use the on-screen configuration guide to setup. 
 
 # PREREQUISITES
@@ -7,6 +10,7 @@ Build and sell your own Raspberry Pi based streaming device.  Sell your own SD c
  - Wifi connection.
  - Television plugged into Raspberry Pi.
  - Computer, tablet or smartphone for controlling server.
+ - Use the companion iOS app to Stream to Royalbox from iOS Device (optional)
  
 # CREDITS
 
@@ -17,7 +21,20 @@ Streaming Engine - https://github.com/blissland/blissflixx
 Wifi Configuration - https://github.com/billz/raspap-webgui
 
 -------------------------------------------------------------------------------------------------------------------------
-# HOW TO BUILD
+# SCREENSHOTS
+
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step1.png" width="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step2.png" width="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_headless.png" width="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard.png" width="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard_video_loading.png" width="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/foxnews.png" width="250" />
+
+# PRE-CONFIGURED IMG FILE
+
+
+
+# HOW TO BUILD - DO IT YOURSELF
 
 **NOTE**:  This process modifies the filesystem and therefore should be used at own risk.
 
@@ -62,8 +79,4 @@ pi@raspberrypi:~$ chmod -R www-data:www-data /var/www
 
 
 
-Use the iOS app to Stream to Royalbox
-
-<a href="https://itunes.apple.com/us/app/royalbox-control-center-home/id1450861330?mt=8"><img src="images/githawk-pulse.gif" /></a>
-<p align="center"><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png" width="250" /></a></p>
 
