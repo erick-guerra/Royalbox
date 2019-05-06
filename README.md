@@ -21,7 +21,23 @@ Streaming Engine - https://github.com/blissland/blissflixx
 Wifi Configuration - https://github.com/billz/raspap-webgui
 
 -------------------------------------------------------------------------------------------------------------------------
-# HOW TO BUILD
+# SCREENSHOTS
+
+![TV Headless Setup Step 1](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step1.png)
+
+![TV Headless Setup Step 2](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step2.png)
+
+![Device Headless Setup](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_headless.png)
+
+![TV Dashboard](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard.png)
+![TV Dashboard Loading](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard_video_loading.png)
+![TV Video Playing](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/foxnews.png)
+
+# PRE-CONFIGURED IMG FILE
+
+
+
+# HOW TO BUILD - DO IT YOURSELF
 
 **NOTE**:  This process modifies the filesystem and therefore should be used at own risk.
 
