@@ -30,7 +30,8 @@ Login into your Raspberry Pi
 pi@raspberrypi:~$ cd Downloads
 pi@raspberrypi:~$ git clone https://github.com/omody/Royalbox.git
 
-2) Move the home directory and replace your current home/pi directory
+2) Move the home directory and replace your current home pi directory
+
 pi@raspberrypi:~$ sudo mv ~/Downloads/home/* ~/home/.
 
 3) Now configure blissflixx
