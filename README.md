@@ -25,36 +25,36 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 
 **TV SETUP and DASHBOARD**
 <p align="center">
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step1.png" width="250" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step2.png" width="250" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard.png" width="250" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard_video_loading.png" width="250" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/foxnews.png" width="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step1.png" width="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step2.png" width="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard.png" width="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard_video_loading.png" width="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/foxnews.png" width="350" />
 </p>
 
 **TABLET/COMPUTER/MOBILE SETUP SCREEN**
 <p alight="center">
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_headless.png" width="500" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_headless_iphone.png" height="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_headless_iphone.png" height="350" />
 </p>
 
 **CASTING TO TV MOBILE**
 <p align="center">
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_channels_iphone.png" height="250" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_bbc_iphone.png" height="250" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_cast_iphone.png" height="250" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_cast2_iphone.png" height="250" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_popup_iphone.png" height="250" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_remote_iphone.png" height="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_channels_iphone.png" height="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_bbc_iphone.png" height="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_cast_iphone.png" height="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_cast2_iphone.png" height="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_popup_iphone.png" height="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_remote_iphone.png" height="350" />
 </p>
 
 **CASTING TO TV CHROME**
 <p align="center">
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_abciview_mac.png" width="500" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_bbc_mac.png" width="500" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_channels_mac.png" width="500" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_itv_mac.png" width="500" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_sbc_mac.png" width="500" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_abciview_mac.png" width="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_bbc_mac.png" width="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_channels_mac.png" width="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_itv_mac.png" width="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_sbs_mac.png" width="350" />
 </p>
 
 -------------------------------------------------------------------------------------------------------------------------
