@@ -120,6 +120,10 @@ www-data ALL=(ALL) NOPASSWD:/home/pi/scripts/dhcp_rebooter.sh
 www-data ALL=(ALL) NOPASSWD:/bin/cat /etc/hostname
 www-data ALL=(ALL) NOPASSWD: /bin/bash, /sbin/iwlist, /usr/bin/timedatectl, /usr/bin/tvservice, /sbin/fping, /sbin/ifconfig
 ```
+You can make modification using this reference
+https://scribles.net/customizing-boot-up-screen-on-raspberry-pi/
+
+I did the following:
 Now get rid of the rainbow logo
 ```
 pi@raspberrypi:~$ sudo vi /boot/cmdline.txt
