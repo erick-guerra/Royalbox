@@ -10,6 +10,7 @@ Build and sell your own Raspberry Pi based streaming device.  Sell your own SD c
  - Wifi connection.
  - Television plugged into Raspberry Pi.
  - Computer, tablet or smartphone for controlling server.
+ - Use the companion iOS app to Stream to Royalbox from iOS Device (optional)
  
 # CREDITS
 
@@ -65,8 +66,4 @@ pi@raspberrypi:~$ chmod -R www-data:www-data /var/www
 
 
 
-Use the iOS app to Stream to Royalbox
-
-<a href="https://itunes.apple.com/us/app/royalbox-control-center-home/id1450861330?mt=8"><img src="images/githawk-pulse.gif" /></a>
-<p align="center"><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png" width="250" /></a></p>
 
