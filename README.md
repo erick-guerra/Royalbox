@@ -18,7 +18,8 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 
 -------------------------------------------------------------------------------------------------------------------------
 # HOW TO BUILD
-# THE BELOW STEPS WORK BUT PLEASE USE AT YOUR RISK.  I AM NOT RESPONSIBLE FOR ANY DAMAGE, MISINFORMAITON, OR ANY LOSS.  
+
+**NOTE**:  This process modifies the filesystem and therefore should be used at own risk.
 
 This repository has the full directory structure and files that were replaced/modified to build this device.  You will need to build this project once and then you can create and image of your Raspberry Pi and/or buy a SD card duplicator to sell your own SD cards or build your CPU's.
 
@@ -26,52 +27,38 @@ This repository has the full directory structure and files that were replaced/mo
 Login into your Raspberry Pi
 
 1) Clone the project
-
+```
 pi@raspberrypi:~$ cd Downloads
 pi@raspberrypi:~$ git clone https://github.com/omody/Royalbox.git
+```
 
 2) Move the home directory and replace your current home pi directory
-
+```
 pi@raspberrypi:~$ sudo mv ~/Downloads/home/* ~/home/.
+```
 
 3) Now configure blissflixx
+```
 pi@raspberrypi:~$ cd ~/blissflixx
+pi@raspberrypi:~$ sudo chmod +x configure.sh
 pi@raspberrypi:~$ sudo ./configure.sh
+```
 
 This will take about 20 mins to rebuild on a Pi B+.
 
 4) Now lets do the headless setup, accept all the default suggestion
-
+```
 pi@raspberrypi:~$ wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
+```
 
 5) Now lets replace the headless configuration software that comes with our own custom one
-
+```
 pi@raspberrypi:~$ sudo mv /var/www/html /var/www/html_old
 pi@raspberrypi:~$ sudo cp -r ~/Downloads/var/www /var/.
+pi@raspberrypi:~$ chmod -R www-data:www-data /var/www
+```
 
-
-
-
-
-git clone https://github.com/blissland/blissflixx.git
-cd blissflixx
-
-COPY THE UPDATE FILES FROM THIS REPORSITORY AND REPLACE THE FILES YOU CLONED PREVIOUSLY
-
-chmod +x configure.sh
-sudo ./configure.sh
-
-Raspap-Webgui - Installation can be used as it.  The modification will be later described.
-wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
-
-After installing Rasap-Webgui you need to replace additional file and make additional modification
-
-sudo mv /var/www/html /var/www/html_old
-sudo mv ~/Downloads/Royalbox/config.json /var/www
-sudo mv ~/Downloads/Royalbox/serial_num.txt /var/wwww
-sudo mv ~/Downloads/Royalbox/html /var/www/html
-chmod -R www-data:www-data /var/www
-
+6) Now lets configure the interfaces, webservers, cronjob and sudoer's to finish this up
 
 
 
