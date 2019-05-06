@@ -23,17 +23,28 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 -------------------------------------------------------------------------------------------------------------------------
 # SCREENSHOTS
 
+**TV SETUP and DASHBOARD**
+<p align="center">
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step1.png" width="250" />
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step2.png" width="250" />
-<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_headless.png" width="250" />
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard.png" width="250" />
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard_video_loading.png" width="250" />
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/foxnews.png" width="250" />
+</p>
 
+**TABLET/COMPUTER/MOBILE SETUP SCREEN**
+<p alight="center">
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_headless.png" width="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_headless_iphone.png" width="250" />
+</p>
+
+**CASTING TO TV**
+
+-------------------------------------------------------------------------------------------------------------------------
 # PRE-CONFIGURED IMG FILE
 
 
-
+-------------------------------------------------------------------------------------------------------------------------
 # HOW TO BUILD - DO IT YOURSELF
 
 **NOTE**:  This process modifies the filesystem and therefore should be used at own risk.
