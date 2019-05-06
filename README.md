@@ -23,15 +23,12 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 -------------------------------------------------------------------------------------------------------------------------
 # SCREENSHOTS
 
-![TV Headless Setup Step 1](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step1.png)
-
-![TV Headless Setup Step 2](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step2.png)
-
-![Device Headless Setup](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_headless.png)
-
-![TV Dashboard](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard.png)
-![TV Dashboard Loading](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard_video_loading.png)
-![TV Video Playing](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/foxnews.png)
+![TV Headless Setup Step 1](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step1.png | width=200)
+![TV Headless Setup Step 2](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_step2.png | width=200)
+![Device Headless Setup](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/wifi_setup_headless.png | width=200)
+![TV Dashboard](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard.png | width=200)
+![TV Dashboard Loading](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_dashboard_video_loading.png | width=200)
+![TV Video Playing](https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/foxnews.png | width=200)
 
 # PRE-CONFIGURED IMG FILE
 
