@@ -38,7 +38,24 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_headless_iphone.png" height="250" />
 </p>
 
-**CASTING TO TV**
+**CASTING TO TV MOBILE**
+<p align="center">
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_channels_iphone.png" height="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_bbc_iphone.png" height="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_cast_iphone.png" height="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_cast2_iphone.png" height="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_popup_iphone.png" height="250" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_remote_iphone.png" height="250" />
+</p>
+
+**CASTING TO TV CHROME**
+<p align="center">
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_abciview_mac.png" width="500" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_bbc_mac.png" width="500" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_channels_mac.png" width="500" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_itv_mac.png" width="500" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_sbc_mac.png" width="500" />
+</p>
 
 -------------------------------------------------------------------------------------------------------------------------
 # PRE-CONFIGURED IMG FILE
