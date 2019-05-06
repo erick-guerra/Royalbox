@@ -106,7 +106,31 @@ pi@raspberrypi:~$ chmod -R www-data:www-data /var/www
 ```
 
 6) Now lets configure the interfaces, webservers, cronjob and sudoer's to finish this up
+```
+pi@raspberrypi:~$ sudo cp -r ~/Downloads/etc /
+pi@raspberrypi:~$ sudo cp -r ~/Downloads/boot /
+pi@raspberrypi:~$ sudo cp -r ~/Downloads/usr /
+pi@raspberrypi:~$ sudo visudo
+```
+Add the following lines to the end
+```
+www-data ALL=(ALL) NOPASSWD:/home/pi/scripts/connect_to_wifi_royalbox.sh
+www-data ALL=(ALL) NOPASSWD:/home/pi/scripts/wifi_rebooter.sh
+www-data ALL=(ALL) NOPASSWD:/home/pi/scripts/dhcp_rebooter.sh
+www-data ALL=(ALL) NOPASSWD:/bin/cat /etc/hostname
+www-data ALL=(ALL) NOPASSWD: /bin/bash, /sbin/iwlist, /usr/bin/timedatectl, /usr/bin/tvservice, /sbin/fping, /sbin/ifconfig
+```
+Now get rid of the rainbow logo
+```
+pi@raspberrypi:~$ sudo vi /boot/cmdline.txt
+```
+Add the end of the file put a space and add:
+```
+logo.nologo
+```
+Now lets add the cronjob for startup and make sure the system restarts processes if something crashes
+```
+pi@raspberrypi:~$ crontab < ~/Downloads/home/pi/setup_cronjobs.txt
+```
 
-
-
-
+Now reboot and if everything goes smoothly you can proceed with a headless setup for your Raspberry Pi (Royalbox).
