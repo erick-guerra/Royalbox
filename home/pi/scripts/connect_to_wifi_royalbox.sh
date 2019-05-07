@@ -1,4 +1,4 @@
-/bin/bash
+#/bin/bash
 
 if ! (set -o noclobber ; echo > /tmp/connecttowifi.lock) ; then
   #echo 'Running Already - Connection Failed'

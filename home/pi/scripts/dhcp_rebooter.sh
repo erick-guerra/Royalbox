@@ -20,6 +20,7 @@ then
       then
         echo 'restoring dhcpcd'
         sudo cp /home/pi/scripts/dhcpcd.conf.raspap /etc/dhcpcd.conf
+        sudo cp /home/pi/scripts/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
       fi
 
       # Restart the wireless interface
