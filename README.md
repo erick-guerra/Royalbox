@@ -1,5 +1,6 @@
 <a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/Royalbox/raw/master/var/www/html/img/royalbox-logo-color-horiz-light.png" /></a>
 <p align="center"><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png" width="250" /></a></p>
+Royalbox Remote App allows for unlimited streaming if you have a Royalbox.  If you do not then there is an in-app purchase.  The app tried to connect to your Royalbox and if it is able to unlocks the in-app purchase automatically.
 
 # ROYALBOX
 Build and sell your own Raspberry Pi based streaming device.  Sell your own SD card loaded to convert any Raspberry Pi into a Chromecast/Roku like streaming device.  Or build your own Raspberry Pi CPU with pre-loaded software to use as a streaming stick.  With Headless setup (No keyboard or mouuse required to setup your streaming device) you can simply plug it in your TV and a use the on-screen configuration guide to setup. 
@@ -17,6 +18,7 @@ Build and sell your own Raspberry Pi based streaming device.  Sell your own SD c
 The project is built on 2 other projects from Github and some additional customization for the purpose of creating the Royalbox.
 
 Streaming Engine - https://github.com/blissland/blissflixx
+**NOTE:** The Royalbox is meant to bypass geo-restrictions.  Which is why this repo has 4 channels currently.  You can still use iPhone app to cast any web video to your Royalbox connected TV.  If you want additional channels go the blissflix repo and you can add those channels as well.  Blissflixx also has user plugin channels that may or may not work still but you can use them as well.
 
 Wifi Configuration - https://github.com/billz/raspap-webgui
 
