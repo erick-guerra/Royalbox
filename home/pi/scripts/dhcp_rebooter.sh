@@ -34,17 +34,18 @@ then
       then
         echo 'interface is good..exiting.'
       else
-        echo 'resetting wlan0'
-        sudo rfkill block 0
-        sleep 2
-        sudo rfkill unblock 0
-        sleep 10
-        sudo service hostapd stop
-        sleep 2
-        sudo service hostapd start
-        sudo service avahi-daemon stop
-        sleep 2
-        sudo service avahi-daemon start
+	sudo reboot
+        #echo 'resetting wlan0'
+        #sudo rfkill block 0
+        #sleep 2
+        #sudo rfkill unblock 0
+        #sleep 10
+        #sudo service hostapd stop
+        #sleep 2
+        #sudo service hostapd start
+        #sudo service avahi-daemon stop
+        #sleep 2
+        #sudo service avahi-daemon start
       fi
     #fi
   #echo 'reload page'
