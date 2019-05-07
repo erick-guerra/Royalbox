@@ -1,5 +1,18 @@
-sudo vi /boot/cmdline.txt
+Copy the config.txt and replace with existing
 
-Add the line to the end of the file:
+pi@raspberrypi: sudo cp config.txt /boot/config.txt
 
- logo.nologo
+Now
+
+pi@raspberrypi: sudo vi /boot/cmdline.txt
+
+
+quiet splash plymouth.ignore-serial-consoles logo.nologo 
+
+Here are brief explanations.
+‘splash’ : enables splash image
+‘quiet’ : disable boot message texts
+‘plymouth.ignore-serial-consoles’ : not sure about this but seems it’s required when use Plymouth.
+‘logo.nologo’ : removes Raspberry Pi logo in top left corner.
+
+Note : Some might be there by default, but make sure if those exist.

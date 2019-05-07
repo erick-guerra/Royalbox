@@ -4,4 +4,4 @@
 0/5 * * * * /home/pi/scripts/start_bliss.sh
 0/15 * * * * /home/pi/scripts/startup.sh
 @reboot /home/pi/scripts/dhcp_rebooter.sh
-@reboot /home/pi/scripts/start_bliss.sh >> out.txt 2>&1
+@reboot /home/pi/scripts/start_bliss.sh 
