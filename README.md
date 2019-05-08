@@ -62,8 +62,7 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 -------------------------------------------------------------------------------------------------------------------------
 # PRE-CONFIGURED IMG FILE
 
-**In Progress***
-I am working on this
+<a href="http://www.gplexdb.net/Royalbox.img.gz">Download</a> the image file and create and sell your own SD card.
 
 -------------------------------------------------------------------------------------------------------------------------
 # HOW TO BUILD - DO IT YOURSELF - In progress
