@@ -3,6 +3,7 @@
 Royalbox Remote App allows for unlimited streaming if you have a Royalbox.  If you do not then there is an in-app purchase.  The app tried to connect to your Royalbox and if it is able to unlocks the in-app purchase automatically.
 
 # ROYALBOX
+Watch - BBC, iTV, ABC iView, SBS OnDemand.
 Build and sell your own Raspberry Pi based streaming device.  Sell your own SD card loaded to convert any Raspberry Pi into a Chromecast/Roku like streaming device.  Or build your own Raspberry Pi CPU with pre-loaded software to use as a streaming stick.  With Headless setup (No keyboard or mouuse required to setup your streaming device) you can simply plug it in your TV and a use the on-screen configuration guide to setup. 
 
 # PREREQUISITES
