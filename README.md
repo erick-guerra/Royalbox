@@ -61,9 +61,9 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 </p>
 
 -------------------------------------------------------------------------------------------------------------------------
-# PRE-CONFIGURED IMG FILE
+# PRE-CONFIGURED SD CARD or RASPBERRY PI A+
 
-<a href="http://www.gplexdb.net/Royalbox.img.gz">Download</a> the image file and create and sell your own SD card.
+You can purchase a pre-configured SD CARD to plug into your own Raspberry Pi that you own or just buy a pre-configure CPU from our online store.
 
 -------------------------------------------------------------------------------------------------------------------------
 # HOW TO BUILD - DO IT YOURSELF - In progress
