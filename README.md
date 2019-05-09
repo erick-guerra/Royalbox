@@ -105,6 +105,14 @@ pi@raspberrypi:~$ wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspa
 pi@raspberrypi:~$ sudo mv /var/www/html /var/www/html_old
 pi@raspberrypi:~$ sudo cp -r ~/Downloads/var/www /var/.
 pi@raspberrypi:~$ chmod -R www-data:www-data /var/www
+pi@raspberrypi:~$ sudo chown www-data:www-data /etc/wpa_supplicant/wpa_supplicant.conf
+pi@raspberrypi:~$ sudo chmod 777 /etc/wpa_supplicant/wpa_supplicant.conf
+pi@raspberrypi:~$ sudo chmod +x /home/pi/rpi-hdmi.sh
+pi@raspberrypi:~$ sudo chmod +x /home/pi/scripts/startup.sh
+pi@raspberrypi:~$ sudo chmod +x /home/pi/scripts/connect_to_wifi_royalbox.sh
+pi@raspberrypi:~$ sudo chmod +x /home/pi/scripts/dhcp_rebooter.sh
+pi@raspberrypi:~$ sudo chmod +x /home/pi/scripts/start_bliss.sh
+pi@raspberrypi:~$ sudo chmod +x /home/pi/scripts/nightly_reboot.sh
 ```
 
 6) Now lets configure the interfaces, webservers, cronjob and sudoer's to finish this up
@@ -132,11 +140,29 @@ pi@raspberrypi:~$ sudo vi /boot/cmdline.txt
 ```
 Add the end of the file put a space and add:
 ```
-logo.nologo
+quiet splash plymouth.ignore-serial-consoles logo.nologo
 ```
+Here are brief explanations.
+‘splash’ : enables splash image
+‘quiet’ : disable boot message texts
+‘plymouth.ignore-serial-consoles’ : not sure about this but seems it’s required when use Plymouth.
+‘logo.nologo’ : removes Raspberry Pi logo in top left corner.
+
+Note : Some might be there by default, but make sure if those exist.
+
 Now lets add the cronjob for startup and make sure the system restarts processes if something crashes
 ```
 pi@raspberrypi:~$ crontab < ~/Downloads/home/pi/setup_cronjobs.txt
+```
+Or you add them manually
+```
+*/3 * * * * /home/pi/scripts/wifi_rebooter.sh
+*/10 * * * * /home/pi/scripts/dhcp_rebooter.sh
+0 3 * * * /home/pi/scripts/nightly_reboot.sh
+0/5 * * * * /home/pi/scripts/start_bliss.sh
+0/15 * * * * /home/pi/scripts/startup.sh
+@reboot /home/pi/scripts/dhcp_rebooter.sh
+@reboot /home/pi/scripts/start_bliss.sh
 ```
 
 Now reboot and if everything goes smoothly you can proceed with a headless setup for your Raspberry Pi (Royalbox).
