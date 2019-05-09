@@ -1,11 +1,21 @@
 <a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/Royalbox/raw/master/var/www/html/img/royalbox-logo-color-horiz-light.png" /></a>
 <p align="center"><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png" width="250" /></a></p>
-Royalbox Remote App allows for unlimited streaming if you have a Royalbox.  If you do not then there is an in-app purchase.  The app tried to connect to your Royalbox and if it is able to unlocks the in-app purchase automatically.
+Royalbox Remote App allows for unlimited streaming if you have a Royalbox.  If you do not then there is an in-app purchase.  The app tries to connect to your Royalbox and if it is able to unlocks the in-app purchase automatically.
 
 # ROYALBOX
 Watch - BBC, iTV, ABC iView, SBS OnDemand.
 Build and sell your own Raspberry Pi based streaming device.  Sell your own SD card loaded to convert any Raspberry Pi into a Chromecast/Roku like streaming device.  Or build your own Raspberry Pi CPU with pre-loaded software to use as a streaming stick.  With Headless setup (No keyboard or mouuse required to setup your streaming device) you can simply plug it in your TV and a use the on-screen configuration guide to setup. 
 
+-------------------------------------------------------------------------------------------------------------------------
+# PRE-CONFIGURED SD CARD or RASPBERRY PI A+
+
+You can purchase a pre-configured SD CARD to plug into your own Raspberry Pi that you own or just buy a pre-configure CPU from our online store.
+
+<a href="https://royalbox.tv/index.php/product/pre-loaded-micro-sd-card/">Pre-configured MicroSD Card<img src="https://royalbox.tv/wp-content/uploads/2019/05/micro-sd-large_1024x1024@2x-324x324.png" /></a>
+<br/>
+<a href="https://royalbox.tv/index.php/product/royalbox-tv-streamer-2/">Pre-configure Raspoberry Pi A+<img src=""https://royalbox.tv/wp-content/uploads/2019/02/royalbox_pi_a_1-324x324.png /></a>
+
+-------------------------------------------------------------------------------------------------------------------------
 # PREREQUISITES
 
  - Raspberry Pi A+, B+, ZeroW with at least 16Gb SD card running Raspbian. 
@@ -61,12 +71,8 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 </p>
 
 -------------------------------------------------------------------------------------------------------------------------
-# PRE-CONFIGURED SD CARD or RASPBERRY PI A+
-
-You can purchase a pre-configured SD CARD to plug into your own Raspberry Pi that you own or just buy a pre-configure CPU from our online store.
-
--------------------------------------------------------------------------------------------------------------------------
-# HOW TO BUILD - DO IT YOURSELF - In progress
+# HOW TO BUILD - DO IT YOURSELF 
+# Step by step guide
 
 **NOTE**:  This process modifies the filesystem and therefore should be used at own risk.
 
