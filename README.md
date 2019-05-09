@@ -10,10 +10,12 @@ Build and sell your own Raspberry Pi based streaming device.  Sell your own SD c
 # PRE-CONFIGURED SD CARD or RASPBERRY PI A+
 
 You can purchase a pre-configured SD CARD to plug into your own Raspberry Pi that you own or just buy a pre-configure CPU from our online store.
-
+<p align="left">
 <a href="https://royalbox.tv/index.php/product/pre-loaded-micro-sd-card/">Pre-configured MicroSD Card<img src="https://royalbox.tv/wp-content/uploads/2019/05/micro-sd-large_1024x1024@2x-324x324.png" /></a>
-<br/>
+</p>
+<p alight='left">
 <a href="https://royalbox.tv/index.php/product/royalbox-tv-streamer-2/">Pre-configure Raspoberry Pi A+<img src=""https://royalbox.tv/wp-content/uploads/2019/02/royalbox_pi_a_1-324x324.png /></a>
+</p>
 
 -------------------------------------------------------------------------------------------------------------------------
 # PREREQUISITES
