@@ -76,6 +76,38 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 # HOW TO BUILD - DO IT YOURSELF 
 # Step by step guide
 
+**EASY OPTION"
+You can download and copy the image to your own SD card using the following steps
+
+1) Download the image <<a href="https://www.gplexdb.net/Royalbox.dmg">here</a>
+2) Step 1. Insert the SD Card to be Restored
+Insert a blank (or used and nuked) SD card into the SD card reader on your Mac.
+
+Step 2. Locate the SD Card to be Restored
+Open Terminal and locate your SD Card, noting that the number may be different to that previously used, using the command:
+```
+diskutil list
+```
+
+Step 3. Unmount the SD Card
+In Terminal, enter the following command:
+```
+diskutil unmountDisk /dev/disk2
+```
+
+Step 3. Format the SD Card
+When you have identified your SD Card, enter the following command to format it as FAT16, in my case it’s /dev/disk2. Amend this as required for your circumstances:
+```
+sudo newfs_msdos -F 16 /dev/disk2
+```
+
+Step 4. Restore from a Cloned Disc Image
+Locate the disc image, dmg, that you previously cloned. My example assumes that the dmg is on the Desktop. In Terminal, enter the following command ensuring that you identify the correct destination disc, in my example it’s /dev/disk2.
+```
+sudo dd if=~/Desktop/Royalbox.dmg of=/dev/disk2
+```
+
+
 **NOTE**:  This process modifies the filesystem and therefore should be used at own risk.
 
 This repository has the full directory structure and files that were replaced/modified to build this device.  You will need to build this project once and then you can create and image of your Raspberry Pi and/or buy a SD card duplicator to sell your own SD cards or build your CPU's.
