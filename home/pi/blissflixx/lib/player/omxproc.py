@@ -1,9 +1,13 @@
 import os, time, locations
 from processpipe import ExternalProcess, ProcessException
+import cherrypy
 
 OMX_CMD_ORIG = "omxplayer --timeout 120 --aspect-ratio stretch -I --no-keys "
-OMX_CMD = "omxplayer --timeout 6000 -o both -I "
-#OMX_CMD = "vlc -f --quiet-synchro --no-vidoe-title-show "
+#OMX_CMD = "omxplayer --timeout 6000 -o both -I "
+OMX_CMD = "omxplayer --timeout 6000 -o both --aspect-ratio stretch -I --no-keys "
+#OMX_CMD = "/usr/bin/vlc -f --quiet-synchro --no-vidoe-title-show "
+#OMX_CMD = "omxplayer --hw --timeout 60s -o local --no-keys pipe:0 "
+
 _DBUS_PATH = os.path.join(locations.BIN_PATH, "dbus.sh")
 _INPUT_TIMEOUT = 10
 _START_TIMEOUT = 120
@@ -17,7 +21,7 @@ class OmxplayerProcess(ExternalProcess):
      return self.cmd
 
   def name(self):
-    return 'omxplayer'
+    return 'omxplayer(OmxplayerProcess)'
 
   def _wait_input(self, fname):
     for i in xrange(_INPUT_TIMEOUT):
@@ -43,8 +47,6 @@ class OmxplayerProcess(ExternalProcess):
       self.cmd = tail + ' | ' + self.cmd + 'pipe:0'
       # Wait a bit for input
       time.sleep(5)
-
-    #print "self.cmd =>" + self.cmd 
 
     ExternalProcess.start(self, args)
 

@@ -12,8 +12,9 @@
             <div class="item-title"><raw content={ title } /></div>
             <div class="item-subtitle"><raw content={ subtitle } /></div>
             <div class="item-synopsis"><raw content={ synopsis } /></div>
-            <u><a href="" onfocus="this.blur()" onclick={ parent.openItem }>Play on TV</a></u><br/><br/>
- 	    <div style="display:none" id="spinnerTV"><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Processing Video...</div>
+            <u><a href="" onfocus="this.blur()" onclick={ parent.showVideoOnRoyalbox }>Play on TV</a></u><br/><br/>
+            <!-- <u><a href="" onfocus="this.blur()" onclick={ parent.openItem }>Play on TV</a></u><br/><br/> -->
+ 	    <!-- <div style="display:none" id="spinnerTV"><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Processing Video...</div> -->
             <u><a href="" onfocus="this.blur()" onclick={ parent.showVideo }>Play on Device</a></u><br/><br/>
             <span each={ actions }>
                 <a href="" onclick={ parent.parent.doAction } class="item-action"> { label }</a>
@@ -33,7 +34,7 @@
           <button class="btn" data-dismiss="modal"><span>&times;</span></button>
         </div>
         <div class="modal-body">
-          <iframe id="videoframe" src="" style="width: 0; height: 0; border: 0; border: none; position: absolute;"></iframe>
+          <iframe id="videoframe" src="" style="width: 0; height: 0; border: 0; border: none; position: absolute;"></iframe> 
           <div class="container-fluid" id="accordion">
             <div class="row">
 		<div id="spinner1"><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Processing Video...</div>
@@ -75,22 +76,23 @@
             //self.f_link.source.value = data
             //if (data) showVideo()
             if (data) {
-	        var newdata = data.replace(/^(https:|)\/\//,'ffproxys://')
-                newdata = newdata.replace(/^(http:|)\/\//,'ffproxy://')
-                //$('#f_link video source').attr('src', data)
-                //$("#f_link video")[0].load()
-                //$("#f_link video")[0].autoplay = true
-                //setTimeout(function() {
-                //  $("#f_link video")[0].play()
-                //}, 5000);
+	        //var newdata = data.replace(/^(https:|)\/\//,'ffproxys://')
+                //newdata = newdata.replace(/^(http:|)\/\//,'ffproxy://')
+                $('#f_link video source').attr('src', data)
+                $("#f_link video")[0].load()
+                $("#f_link video")[0].autoplay = true
+                setTimeout(function() {
+                  $("#f_link video")[0].play()
+                }, 5000);
+		//alert(data)
                 //$("#videoframe").attr("src", data);
-	        if (newdata.indexOf("?") >= 0) {
-                  newdata = newdata + "&royalbox=1"
-                } else {
-                  newdata = newdata + "?royalbox=1"
-                }
-                newdata = newdata + "&thumbnail=" +  e.item.img + "&videotitle=" + e.item.title
-                $("#videoframe").attr("src", newdata)
+	        //if (newdata.indexOf("?") >= 0) {
+                //  newdata = newdata + "&royalbox=1"
+                //} else {
+                //  newdata = newdata + "?royalbox=1"
+                //}
+                //newdata = newdata + "&thumbnail=" +  e.item.img + "&videotitle=" + e.item.title
+                //$("#videoframe").attr("src", newdata)
                 $("#spinner1")[0].style.display = "none"
             }
           })
@@ -110,11 +112,22 @@
           var url = item.url.substring(11)
           Utils.goRoute('showmore', item.chid, item.title, url)
         } else {
-          $("#spinnerTV")[0].style.display = "block"
-          playerStore.play(item.url, item.title, function(err) {
-            if (err) return Utils.showError(err)
+          $("#spinner1")[0].style.display = "block"
+          //playerStore.play(item.url, item.title, function(err) {
+          //  if (err) return Utils.showError(err)
+          playerStore.playOnDevice(item.url, item.title, function(err,data) {
+            if (data) {
+		var title = e.item.title
+		title = title.replace(/"/g, '')
+                var newurlparams = "{\"url\":\"" + encodeURIComponent(data) + "\",\"title\":\"" + encodeURIComponent(title) + "\"}"
+                var newdata = "http://royalbox.local/api/playr?fn=play&data=" + newurlparams 
+                //var newdata = "http://royalbox.local/api/playr?fn=playOnRB&data=" + newurlparams 
+                $("#videoframe").attr("src", newdata)
+                $("#spinner1")[0].style.display = "none"
+                $('#videoModal').modal('hide')
+            }
           })
-          $("#spinnerTV")[0].style.display = "none"
+          //$("#spinner1")[0].style.display = "none"
         }
       }
     }
@@ -236,6 +249,14 @@
 
     showVideo(e) {
       self.openItemOnDevice(e)
+      self.showing = true
+      $('#f_link video').attr('poster', e.item.img)
+      $('#videoModal').modal('show')
+      $('#videoModal').on('hide.bs.modal', self.removeDialogStyle)
+    }
+
+    showVideoOnRoyalbox(e) {
+      self.openItem(e)
       self.showing = true
       $('#f_link video').attr('poster', e.item.img)
       $('#videoModal').modal('show')

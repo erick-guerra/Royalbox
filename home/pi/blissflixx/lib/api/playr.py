@@ -114,39 +114,29 @@ def play(url=None, title=None, subs=None):
     Player.playLocalFile(obj.path, title)
   elif obj.netloc == "www.twitch.tv":
     Player.playLivestream(url, title)
-  elif obj.netloc == "www.sbs.com.au":
-     newurl = download_sbs(url)
-     Player.playURL(newurl, title, subs)
+  elif obj.netloc == "www.gplexdb.net":
+    #print "url=>" + url
+    #print obj.netloc
+    #print file_ext
+    if file_ext in ['.m3u8']:
+      head, sep, tail = url.partition('/http')
+      tail = 'http' + tail
+      #newurl = tail.split('&rocket', 1)[0]
+      #newurl = tail.split('?rocket', 1)[0]
+      newurl = "http://www.royalbox.tv/loadiplayer6.php/" + tail
+      #print "newurl=>" + newurl
+      #print "tail=>" + tail
+      Player.playNoProxy(url, title, subs)
+      #Player.playLive(tail, title, subs)
+    else:
+      Player.playYtdl(url, title, subs)
   elif chanutils.torrent.is_torrent_url(url):
     Player.playTorrent(url, chanutils.torrent.torrent_idx(url), title, subs)
   elif file_ext in ['.m3u8']:
-    #print "url=>" + url
+    print "live url=>" + url
     Player.playLive(url, title, subs)
   else:
-    #print "url=>" + url
-    Player.playYtdl(url, title, subs)
-
-
-def playOrignal(url=None, title=None, subs=None):
-  if url is None:
-    raise ApiError("Play url is undefined")
-  if subs is not None:
-    _save_subs_prefs(subs)
-  obj = urlparse.urlparse(url)
-  #extension = urlparse.urlparse(url)
-  filename, file_ext = splitext(basename(obj.path))
-  if obj.scheme == "file":
-    Player.playLocalFile(obj.path, title)
-  elif obj.netloc == "www.twitch.tv":
-    Player.playLivestream(url, title)
-  elif obj.netloc == "www.sbs.com.au":
-     newurl = download_sbs(url)
-     Player.playLiveNew(newurl, title, subs)
-  elif chanutils.torrent.is_torrent_url(url):
-    Player.playTorrent(url, chanutils.torrent.torrent_idx(url), title, subs)
-  elif file_ext in ['.m3u8']:
-    Player.playLive(url, title, subs)
-  else:
+    #print "youtube url=>" + url
     Player.playYtdl(url, title, subs)
 
 def playOnDevice(url=None, title=None, subs=None):
@@ -165,6 +155,17 @@ def playOnDevice(url=None, title=None, subs=None):
      newurl = download_sbs(url)
      print "playOnDevice newurl=>" + newurl
      return Player.playURL2(newurl, title, subs)
+  elif obj.netloc == "www.gplexdb.net":
+    #print "url=>" + url
+    #print obj.netloc
+    #print file_ext
+    if file_ext in ['.m3u8']:
+      head, sep, tail = url.partition('/http')
+      tail = 'http' + tail
+      newurl = "http://www.royalbox.tv/loadiplayer6.php/" + tail
+      return Player.playNoProxy2(url, title, subs)
+    else:
+      return Player.playYtdl2(url, title, subs)
   elif chanutils.torrent.is_torrent_url(url):
     Player.playTorrent(url, chanutils.torrent.torrent_idx(url), title, subs)
   elif file_ext in ['.m3u8']:

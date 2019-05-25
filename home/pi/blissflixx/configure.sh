@@ -61,6 +61,9 @@ apt-get -y install python-dev
 pip install 'cherrypy<18.0.0'
 #pip install cherrypy
 
+# Install botle
+pip install bottle
+
 # Install api
 #pip install api
 

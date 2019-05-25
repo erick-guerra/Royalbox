@@ -5,6 +5,8 @@ then
 exit
 fi
 
+#sudo pip install --upgrade youtube-dl
+
 #sudo reboot
 sleep 3 && sudo reboot &
 

@@ -79,7 +79,7 @@ Wifi Configuration - https://github.com/billz/raspap-webgui
 **EASY OPTION**
 You can download and copy the image to your own SD card using the following steps
 
-1) Download the image <<a href="https://www.gplexdb.net/Royalbox.dmg">here</a>
+1) Download the image <a href="https://www.gplexdb.net/Royalbox.img">here</a>
 2) Step 1. Insert the SD Card to be Restored
 Insert a blank (or used and nuked) SD card into the SD card reader on your Mac.
 
@@ -106,6 +106,14 @@ Locate the disc image, dmg, that you previously cloned. My example assumes that 
 ```
 sudo dd if=~/Desktop/Royalbox.dmg of=/dev/disk2
 ```
+
+Remember to do a
+```
+sudo raspi-config
+```
+and expand the file system in the Advanced Option to get your full 16 GB back.
+
+
 
 ----------------------------------------------------------------------------------------------------------------
 **MANUAL DO IT YOURSELF***

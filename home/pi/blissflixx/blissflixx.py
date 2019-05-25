@@ -11,6 +11,8 @@ sys.path.append(YTDL_PATH)
 #print CHAN_PATH
 import api, locations, gitutils, cherrypy
 from chanutils import get_xml, get_doc, select_all, select_one, get_json
+import cherrypy_cors
+cherrypy_cors.install()
 
 # Do not allow running as root
 #if os.geteuid() == 0:
@@ -22,6 +24,11 @@ from chanutils import get_xml, get_doc, select_all, select_one, get_json
 if not path.exists(locations.YTUBE_PATH):
   cherrypy.log("Finishing Installation. Please wait...")
   gitutils.clone(locations.LIB_PATH,"https://github.com/rg3/youtube-dl.git")
+
+  # add compile lazy
+  # os command
+  # make lazy-extractors
+  # make youtube-dl
 
   datapath = locations.DATA_PATH
   playlists = os.path.join(datapath, "playlists")
@@ -54,6 +61,52 @@ import signal, traceback, argparse
 import pwd, grp
 RESTARTING = False
 
+class RaspberryCastRemote(object):
+  @cherrypy.expose
+  def default(self):
+    cherrypy.response.headers["Access-Control-Allow-Origin"] = "*"
+    cherrypy.response.status = 200
+    return template('remote')	
+
+class RaspberryCastQueue(object):
+  @cherrypy.expose
+  def default(self):
+    cherrypy.response.headers["Access-Control-Allow-Origin"] = "*"
+    cherrypy.response.status = 200
+    return "1"
+
+class RaspberryCastVideo(object):
+  @cherrypy.expose
+  def default(self, control=None):
+    cherrypy.response.headers["Access-Control-Allow-Origin"] = "*"
+    cherrypy.log("MADE IT ======>" )
+    module = getattr(api, 'playr')
+    call = getattr(module, 'control')
+    data = "{\"action\":\"" + control + "\"}"
+    datadict = json.loads(data)
+    ret = call(**datadict)
+    return '1'
+
+class RaspberryCastRunning(object):
+  @cherrypy.expose
+  def default(self):
+    cherrypy.response.headers["Access-Control-Allow-Origin"] = "*"
+    cherrypy.response.status = 200
+    return '1'
+
+class RaspberryCastStream(object):
+  @cherrypy.expose
+  def index(self, url=None, slow=None):
+    cherrypy.response.headers["Access-Control-Allow-Origin"] = "*"
+    cherrypy.log("MADE IT ======>" ) 
+    module = getattr(api, 'playr')
+    call = getattr(module, 'play')
+    data = "{\"url\":\"" + url + "\",\"title\":\"" + url + "\"}"
+    datadict = json.loads(data)
+    ret = call(**datadict)
+    #return ret
+    return '1'
+
 class Api(object):
 
   def _error(self, status, msg):
@@ -61,6 +114,7 @@ class Api(object):
     return {'error': msg}
 
   def _server(self, fn=None, data=None):
+    cherrypy.response.headers["Access-Control-Allow-Origin"] = "*"
     if fn == 'restart':
       global RESTARTING
       RESTARTING = True
@@ -75,21 +129,25 @@ class Api(object):
 
   @cherrypy.expose
   def chanimage(self, chid, img):
+    cherrypy.response.headers["Access-Control-Allow-Origin"] = "*"
     path = os.path.join(locations.CHAN_PATH, chid, img)
     return cherrypy.lib.static.serve_file(path)
 
   @cherrypy.expose
   def pluginimage(self, chid, img):
+    cherrypy.response.headers["Access-Control-Allow-Origin"] = "*"
     path = os.path.join(locations.PLUGIN_PATH, chid, img)
     return cherrypy.lib.static.serve_file(path)
 
   @cherrypy.expose
   @cherrypy.tools.json_out()
   def default(self, modname, fn=None, data=None):
+    cherrypy.response.headers["Access-Control-Allow-Origin"] = "*"
     if modname == 'server':
       return self._server(fn, data)
     module = getattr(api, modname)
-    #cherrypy.log("moduel ======> " + modname) 
+    #cherrypy.log("modname ======> " + modname) 
+    #cherrypy.log("fn ======> " + fn) 
     if module is None:
       return self._error(404, "API Module '" + modname + "' is not defined")
     call = getattr(module, fn)
@@ -169,6 +227,11 @@ cleanup()
 cherrypy.log = IgnoreStatusLogger()
 
 cherrypy.tree.mount(Api(), '/api')
+#cherrypy.tree.mount(RaspberryCastRemote(), '/remote')
+cherrypy.tree.mount(RaspberryCastStream(), '/stream')
+cherrypy.tree.mount(RaspberryCastRunning(), '/running')
+cherrypy.tree.mount(RaspberryCastVideo(), '/video')
+cherrypy.tree.mount(RaspberryCastQueue(), '/queue')
 cherrypy.tree.mount(Html(), '/', config = {
   '/': {
           'tools.staticdir.on': True,
@@ -178,8 +241,15 @@ cherrypy.tree.mount(Html(), '/', config = {
 	  'log.error_file' : 'error.log',
 	  'log.screen' : True,
           'tools.sessions.on' : True, 
+	  'cors.expose.on' : True,
     },
   })
+
+def load_raspcast_server():
+  server = cherrypy._cpserver.Server()
+  server.socket_host = "0.0.0.0"
+  server.socket_port = 2020
+  server.subscribe()
 
 def exit():
   os.system('stty sane')
@@ -187,6 +257,9 @@ def exit():
 
 engine.signal_handler.handlers['SIGINT'] = exit
 engine.signal_handler.handlers['SIGUSR2'] = engine.signal_handler.bus.restart
+
+load_raspcast_server()
+
 cherrypy.config.update({'server.socket_host': '0.0.0.0'})
 port = 80
 if args.port:

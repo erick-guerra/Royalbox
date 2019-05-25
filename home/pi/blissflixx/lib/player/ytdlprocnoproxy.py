@@ -11,7 +11,7 @@ class YoutubeDlNoProxy(ExternalProcess):
     self.url = url
 
   def name(self):
-    return 'youtube-dl'
+    return 'youtube-dl(YoutubeDlNoProxy)'
 
   def _get_cmd(self, args):
     self.args = args
@@ -24,6 +24,7 @@ class YoutubeDlNoProxy(ExternalProcess):
       cmd.append("--skip-download")
 
     #cmd.append("--verbose")
+    cmd.append("--hls-use-mpegts")
     cmd.append("--format")
     fmat = ythelper.get_format(self.url)
     if fmat is not None:

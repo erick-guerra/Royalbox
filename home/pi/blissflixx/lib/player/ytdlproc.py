@@ -11,7 +11,7 @@ class YoutubeDlProcess(ExternalProcess):
     self.url = url
 
   def name(self):
-    return 'youtube-dl'
+    return 'youtube-dl(YoutubeDlProcess)'
 
   def _get_cmd(self, args):
     self.args = args
@@ -23,7 +23,8 @@ class YoutubeDlProcess(ExternalProcess):
       cmd.append("--dump-single-json")
       cmd.append("--skip-download")
 
-    #cmd.append("--verbose")
+    cmd.append("--verbose")
+    cmd.append("--hls-use-mpegts")
     cmd.append("--format")
     fmat = ythelper.get_format(self.url)
     if fmat is not None:

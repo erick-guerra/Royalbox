@@ -11,7 +11,7 @@ class YoutubeDlProcessLiveNew(ExternalProcess):
     self.url = url
 
   def name(self):
-    return 'youtube-dl'
+    return 'youtube-dl(YoutubeDlProcessLiveNew)'
 
   def _get_cmd(self, args):
     self.args = args

@@ -1,0 +1,71 @@
+#whole {
+	width: 100%;
+	max-width: 500px;
+	height: 240px;	
+}
+
+.fifty {
+	width: 45%;
+	max-width: 250px;
+	margin: 10px 5px;
+}
+
+.ninety {
+	width: 93%;
+	max-width: 500px;
+	margin: 10px;
+}
+
+button {
+	height: 70px;
+}
+
+.input-group {
+	margin-top: 20px;
+	margin-bottom: -10px;
+	width: 93%;
+	max-width: 500px;
+}
+
+.form-control {
+	height: 70px !important;
+}
+
+
+span.glyphicon {
+	font-size: 1.4em;
+}
+
+span.tb {
+	top: -20px;
+	font-size: 1.2em;
+}
+
+#last-div {
+	padding-bottom: 20px;
+}
+
+
+#history-div {
+	width: 93%;
+	text-align: left;
+	font-size: 1.2em;
+}
+
+#clear-history-link-item {
+	font-style: bold;
+	color: red;
+}
+
+#clear_search {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+    margin: auto;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+    display: none
+}

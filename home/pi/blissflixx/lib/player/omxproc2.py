@@ -2,6 +2,7 @@ import os, time
 from processpipe import ExternalProcess, ProcessException
 
 OMX_CMD = "omxplayer --timeout 6000 --aspect-mode stretch -o both -I "
+#OMX_CMD = "vlc -f --quiet-synchro --no-vidoe-title-show "
 _START_TIMEOUT = 6000
 _CMD_FIFO = "/tmp/cmdfifo"
 
@@ -17,7 +18,7 @@ class OmxplayerProcess2(ExternalProcess):
     return cmd + "'" + args['outfile'] + "' < " + _CMD_FIFO
 
   def name(self):
-    return 'omxplayer'
+    return 'omxplayer(OmxplayerProcess2)'
 
   def start(self, args):
     if not os.path.exists(_CMD_FIFO):

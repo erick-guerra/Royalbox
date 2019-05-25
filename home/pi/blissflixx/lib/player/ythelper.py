@@ -61,6 +61,9 @@ DL_URLS = [
 ]
 
 def skip_download(url):
+  return False
+
+def skip_download2(url):
   for url_re in DL_URLS:
     if url_re.match(url):
       return False
@@ -74,8 +77,10 @@ def get_format(url):
     return "best[height<720]"
   elif YOUTUBE_URL.match(url) or VIMEO_URL.match(url):
     # Otherwise may download in webm format
-    return "(mp4)"
+    return "(mp4)/best"
   else:
-    return None
+    return "best[height<720]"
+    #return "(mp4)/best[height<720]"
+    #return None
 
 

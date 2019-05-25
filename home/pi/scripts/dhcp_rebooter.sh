@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo wpa_cli -i wlan0 scan
+
 sleep 180
 
 # The IP for the server you wish to ping (8.8.8.8 is a public Google DNS server)
@@ -20,7 +22,8 @@ then
       then
         echo 'restoring dhcpcd'
         sudo cp /home/pi/scripts/dhcpcd.conf.raspap /etc/dhcpcd.conf
-        sudo cp /home/pi/scripts/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
+	sudo cp /home/pi/scripts/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
+	sudo cp /home/pi/scripts/config.json /var/www/config.json
       fi
 
       # Restart the wireless interface
@@ -34,8 +37,10 @@ then
       if sudo ip addr show wlan0 | grep "10.3.141.1"
       then
         echo 'interface is good..exiting.'
+	exit
       else
-	sudo reboot
+        sudo reboot
+	exit
         #echo 'resetting wlan0'
         #sudo rfkill block 0
         #sleep 2

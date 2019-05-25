@@ -12,6 +12,7 @@ from lvstrmrproc import LivestreamerProcess
 from localproc import LocalFileProcess
 from omxproc import OmxplayerProcess
 from omxproc2 import OmxplayerProcess2
+from omxproc3 import OmxplayerProcess3
 from dlsrvproc import DlsrvProcess
 from subsproc import SubtitlesProcess
 from notifyproc import NotificationProcess
@@ -103,7 +104,7 @@ class _Player(object):
         pipe.add_process(DlsrvProcess())
         pipe.add_process(OmxplayerProcess2())
       else:
-        pipe.add_process(OmxplayerProcess())
+        pipe.add_process(OmxplayerProcess3())
     else:
       pipe.add_process(OmxplayerProcess2())
     self.msgq.put(MSG_PLAYER_PLAY)
@@ -119,7 +120,7 @@ class _Player(object):
     if title is None:
       title = url
     http = ythelper.skip_download(url)
-    self.play(title, YoutubeDlProcess(url), subs, http)
+    self.play(title, YoutubeDlProcess(url), subs, http=False, dlsrv=False)
 
   def playYtdl2(self, url, title=None, subs=None):
     if title is None:
@@ -148,7 +149,7 @@ class _Player(object):
     if title is None:
       title = url
     http = ythelper.skip_download(url)
-    self.play(title, YoutubeDlNoProxy(url), subs, http=True)
+    self.play(title, YoutubeDlNoProxy(url), subs, http=False)
 
   def playLive(self, url, title=None, subs=None):
     if title is None:
