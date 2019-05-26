@@ -1,23 +1,23 @@
 <a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/Royalbox/raw/master/var/www/html/img/royalbox-logo-color-horiz-light.png" /></a>
 <p align="center"><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png" width="250" /></a></p>
 <p align="center"><a href="https://play.google.com/store/apps/details?id=com.gplexdb.royalboxremote"><img src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" width="250" /><a></p>
-<p align="center"><a href="https://chrome.google.com/webstore/detail/royalbox/ifjhhhigdmmmlhppajdjifeeelodmang"><img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png"></p>
-
-Royalbox Remote App allows for unlimited streaming if you have a Royalbox.  If you do not then there is an in-app purchase.  The app tries to connect to your Royalbox and if it is able to unlocks the in-app purchase automatically.
+<p align="center"><a href="https://chrome.google.com/webstore/detail/royalbox/ifjhhhigdmmmlhppajdjifeeelodmang"><img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png"></a></p>
 
 # ROYALBOX
-Watch - BBC, iTV, ABC iView, SBS OnDemand with the built in channles like Roku.  What's better is that you can use it like a Chromecast and cast all shows that are supported by youtube-dl (for a list of supported sites https://ytdl-org.github.io/youtube-dl/supportedsites.html)
+Watch geo-restricted channels like BBC, iTV, ABC iView, SBS OnDemand with the built in channles like Roku.  What's better is that you can use it like a Chromecast and cast all shows that are supported by youtube-dl (for a list of supported sites https://ytdl-org.github.io/youtube-dl/supportedsites.html)
 Build and sell your own Raspberry Pi based streaming device.  Sell your own SD card loaded to convert any Raspberry Pi into a Chromecast/Roku like streaming device.  Or build your own Raspberry Pi CPU with pre-loaded software to use as a streaming stick.  With Headless setup (No keyboard or mouuse required to setup your streaming device) you can simply plug it in your TV and a use the on-screen configuration guide to setup. 
+Royalbox Remote App for iOS allows for unlimited streaming if you have a Royalbox.  If you do not then there is an in-app purchase.  The app tries to connect to your Royalbox and if it is able to unlocks the in-app purchase automatically.
+Chrome and Android apps allow for casting of all youtube-dl supported websites.  You can use your mobile webrowser to watch/cast the Royalbox channels.
 
 -------------------------------------------------------------------------------------------------------------------------
 # PRE-CONFIGURED SD CARD or RASPBERRY PI A+
 
 You can purchase a pre-configured SD CARD to plug into your own Raspberry Pi that you own or just buy a pre-configure CPU from our online store.
 <p align="left">
-<a href="https://royalbox.tv/index.php/product/pre-loaded-micro-sd-card/">Pre-configured MicroSD Card<img src="https://royalbox.tv/wp-content/uploads/2019/05/micro-sd-large_1024x1024@2x-324x324.png" /></a>
+<a href="https://www.amazon.com/dp/B07RWFQMKY?ref=myi_title_dp/">Pre-configured MicroSD Card<img src="https://royalbox.tv/wp-content/uploads/2019/05/micro-sd-large_1024x1024@2x-324x324.png" /></a>
 </p>
 <p alight="left">
-<a href="https://royalbox.tv/index.php/product/royalbox-tv-streamer-2/">Pre-configure Raspoberry PiA+<img src="https://royalbox.tv/wp-content/uploads/2019/02/royalbox_pi_a_1-324x324.png" /></a>
+<a href="https://www.amazon.com/dp/B07RWPKFK6?ref=myi_title_dp/">Pre-configure Raspoberry PiA+<img src="https://royalbox.tv/wp-content/uploads/2019/02/royalbox_pi_a_1-324x324.png" /></a>
 </p>
 
 -------------------------------------------------------------------------------------------------------------------------
