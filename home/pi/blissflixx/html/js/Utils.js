@@ -1,12 +1,6 @@
 var Utils = {
   rpc: function(module, fn, data, cb) {
     var url = '/api/' +  module 
-    if(module === 'channels' || module === 'playr') {
-	url = 'http://www.royalbox.tv:6969/api/' + module
-    }
-    if(fn === 'play' || fn === 'status' || fn === 'control') {
-      url = '/api/' +  module 
-    }
     payload = { fn: fn }
     if (data) payload['data'] = JSON.stringify(data)
     $.getJSON(url, payload, function(data) {

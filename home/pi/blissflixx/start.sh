@@ -1,2 +1,2 @@
 #!/bin/bash
-/home/pi/blissflixx/blissflixx.py --port 80 --daemon
+/usr/bin/python /home/pi/blissflixx/blissflixx.py --port 80 --daemon

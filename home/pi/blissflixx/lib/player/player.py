@@ -149,7 +149,7 @@ class _Player(object):
     if title is None:
       title = url
     http = ythelper.skip_download(url)
-    self.play(title, YoutubeDlNoProxy(url), subs, http=False)
+    self.play(title, YoutubeDlNoProxy(url), subs, http=True)
 
   def playLive(self, url, title=None, subs=None):
     if title is None:

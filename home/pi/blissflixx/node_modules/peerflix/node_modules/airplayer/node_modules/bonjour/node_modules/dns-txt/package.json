@@ -1,0 +1,81 @@
+{
+  "name": "dns-txt",
+  "version": "2.0.2",
+  "description": "Encode/decode DNS-SD TXT record RDATA fields",
+  "main": "index.js",
+  "dependencies": {
+    "buffer-indexof": "^1.0.0"
+  },
+  "devDependencies": {
+    "tape": "^4.2.2",
+    "standard": "^5.3.1"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watson/dns-txt.git"
+  },
+  "keywords": [
+    "rfc6763",
+    "6763",
+    "rfc6762",
+    "6762",
+    "dns",
+    "mdns",
+    "multicast",
+    "txt",
+    "rdata",
+    "dns-sd",
+    "encode",
+    "decode",
+    "parse",
+    "encoder",
+    "decoder",
+    "parser",
+    "service",
+    "discovery"
+  ],
+  "author": {
+    "name": "Thomas Watson Steen",
+    "email": "w@tson.dk",
+    "url": "https://twitter.com/wa7son"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watson/dns-txt/issues"
+  },
+  "homepage": "https://github.com/watson/dns-txt",
+  "coordinates": [
+    55.6465696,
+    12.5491067
+  ],
+  "gitHead": "8c48aed198f9eb1840e7d12c37a84fcba545c8fa",
+  "_id": "dns-txt@2.0.2",
+  "_shasum": "b91d806f5d27188e4ab3e7d107d881a1cc4642b6",
+  "_from": "dns-txt@>=2.0.2 <3.0.0",
+  "_npmVersion": "2.14.7",
+  "_nodeVersion": "4.2.2",
+  "_npmUser": {
+    "name": "watson",
+    "email": "w@tson.dk"
+  },
+  "maintainers": [
+    {
+      "name": "watson",
+      "email": "w@tson.dk"
+    }
+  ],
+  "dist": {
+    "shasum": "b91d806f5d27188e4ab3e7d107d881a1cc4642b6",
+    "tarball": "https://registry.npmjs.org/dns-txt/-/dns-txt-2.0.2.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/dns-txt-2.0.2.tgz_1461509147614_0.3867966157849878"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/dns-txt/-/dns-txt-2.0.2.tgz",
+  "readme": "ERROR: No README data found!"
+}

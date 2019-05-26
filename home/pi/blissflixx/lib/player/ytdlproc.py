@@ -18,12 +18,12 @@ class YoutubeDlProcess(ExternalProcess):
     cmd = [YTDL_PATH, "--no-part", "--no-continue", "--no-playlist", 
            "--max-downloads", "1", "--no-progress", "--output", OUT_FILE]
 
-    if ythelper.skip_download(self.url):
-      cmd.append("--simulate")
-      cmd.append("--dump-single-json")
-      cmd.append("--skip-download")
+    #if ythelper.skip_download(self.url):
+    #  cmd.append("--simulate")
+    #  cmd.append("--dump-single-json")
+    #  cmd.append("--skip-download")
 
-    cmd.append("--verbose")
+    #cmd.append("--verbose")
     cmd.append("--hls-use-mpegts")
     cmd.append("--format")
     fmat = ythelper.get_format(self.url)

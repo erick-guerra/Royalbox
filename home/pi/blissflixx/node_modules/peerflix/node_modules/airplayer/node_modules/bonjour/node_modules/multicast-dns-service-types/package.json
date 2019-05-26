@@ -1,0 +1,56 @@
+{
+  "name": "multicast-dns-service-types",
+  "version": "1.1.0",
+  "description": "Parse and stringify mdns service types",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^3.5.0",
+    "tape": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mafintosh/multicast-dns-service-types.git"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "author": {
+    "name": "Mathias Buus",
+    "url": "@mafintosh"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mdns",
+    "bonjour",
+    "zero",
+    "conf"
+  ],
+  "bugs": {
+    "url": "https://github.com/mafintosh/multicast-dns-service-types/issues"
+  },
+  "homepage": "https://github.com/mafintosh/multicast-dns-service-types",
+  "gitHead": "4f356bd9d4ee4999b07b8d68b11a4a81611065cf",
+  "_id": "multicast-dns-service-types@1.1.0",
+  "_shasum": "899f11d9686e5e05cb91b35d5f0e63b773cfc901",
+  "_from": "multicast-dns-service-types@>=1.1.0 <2.0.0",
+  "_npmVersion": "2.7.5",
+  "_nodeVersion": "1.6.4",
+  "_npmUser": {
+    "name": "mafintosh",
+    "email": "mathiasbuus@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "mafintosh",
+      "email": "mathiasbuus@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "899f11d9686e5e05cb91b35d5f0e63b773cfc901",
+    "tarball": "https://registry.npmjs.org/multicast-dns-service-types/-/multicast-dns-service-types-1.1.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/multicast-dns-service-types/-/multicast-dns-service-types-1.1.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

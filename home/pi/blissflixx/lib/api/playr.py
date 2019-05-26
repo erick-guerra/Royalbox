@@ -100,7 +100,8 @@ def playOnRB(url=None, title=None, subs=None):
     _save_subs_prefs(subs)
   obj = urlparse.urlparse(url)
   #print "url=>" + url
-  Player.playYtdl(url, title, subs)
+  Player.playLive(url, title, subs)
+  #Player.playYtdl(url, title, subs)
 
 def play(url=None, title=None, subs=None):
   if url is None:
@@ -129,10 +130,11 @@ def play(url=None, title=None, subs=None):
       Player.playNoProxy(url, title, subs)
       #Player.playLive(tail, title, subs)
     else:
-      Player.playYtdl(url, title, subs)
+      Player.playLive(url, title, subs)
+      #Player.playYtdl(url, title, subs)
   elif chanutils.torrent.is_torrent_url(url):
     Player.playTorrent(url, chanutils.torrent.torrent_idx(url), title, subs)
-  elif file_ext in ['.m3u8']:
+  elif file_ext in ['.m3u8','.mp4']:
     print "live url=>" + url
     Player.playLive(url, title, subs)
   else:

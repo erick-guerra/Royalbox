@@ -1,4 +1,23 @@
 import re
+import cherrypy, locations, os, json
+import sys
+YTDL_PATH = os.path.join(locations.YTUBE_PATH, "youtube_dl")
+sys.path.append(YTDL_PATH)
+import youtube_dl
+
+def supported(url=None):
+  if url is None:
+    raise ApiError("Play url is undefined")
+
+  ies = youtube_dl.extractor.gen_extractors()
+  for ie in ies:
+    #cherrypy.log("CHECKING: " + ie.IE_NAME)
+    if ie.suitable(url) and ie.IE_NAME != 'generic':
+      cherrypy.log("YES SUPPORTED: " + ie.IE_NAME)
+      return True
+  cherrypy.log("NOT SUPPORTED: " + url)
+  return False
+
 
 BBC_URL = re.compile(r'https?://(?:www\.)?bbc\.co\.uk/(?:(?:(?:programmes|iplayer(?:/[^/]+)?/(?:episode|playlist))/)|music/clips[/#])(?P<id>[\da-z]{8})')
 YOUTUBE_URL = re.compile(r"""(?x)^
@@ -61,7 +80,9 @@ DL_URLS = [
 ]
 
 def skip_download(url):
-  return False
+  if supported(url): 
+    return False
+  return True
 
 def skip_download2(url):
   for url_re in DL_URLS:
@@ -79,8 +100,8 @@ def get_format(url):
     # Otherwise may download in webm format
     return "(mp4)/best"
   else:
-    return "best[height<720]"
-    #return "(mp4)/best[height<720]"
+    #return "best[height<720]"
+    return "(mp4)/best[height<720]"
     #return None
 
 
