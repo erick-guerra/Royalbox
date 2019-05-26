@@ -31,12 +31,16 @@ You can purchase a pre-configured SD CARD to plug into your own Raspberry Pi tha
  
 # CREDITS
 
-The project is built on 2 other projects from Github and some additional customization for the purpose of creating the Royalbox.
+The project is built on 3 other projects from Github and some additional customization for the purpose of creating the Royalbox.
 
 Streaming Engine - https://github.com/blissland/blissflixx
 **NOTE:** The Royalbox is meant to bypass geo-restrictions.  Which is why this repo has 4 channels currently.  You can still use iPhone app to cast any web video to your Royalbox connected TV.  If you want additional channels go the blissflix repo and you can add those channels as well.  Blissflixx also has user plugin channels that may or may not work still but you can use them as well.
 
 Wifi Configuration - https://github.com/billz/raspap-webgui
+This is used for the headless setup.  No need to have a keyboard or mouse.  You will connect to the Royalbox Ad-hock wireless network and setup your wifi connection
+
+Chrome Extension & Android app - https://github.com/vincelwt/RaspberryCast
+This code was used to add similar functionality to able to send youtube-dl supported web pages to your Royalbox to stream
 
 -------------------------------------------------------------------------------------------------------------------------
 # SCREENSHOTS
