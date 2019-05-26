@@ -1,9 +1,12 @@
 <a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/Royalbox/raw/master/var/www/html/img/royalbox-logo-color-horiz-light.png" /></a>
 <p align="center"><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png" width="250" /></a></p>
+<p align="center">[![Android app on Google Play](https://developer.android.com/images/brand/en_app_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=com.gplexdb.royalboxremote)</p>
+<p align="center">[![Extension for Chrome](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/royalbox/ifjhhhigdmmmlhppajdjifeeelodmang)</p>
+
 Royalbox Remote App allows for unlimited streaming if you have a Royalbox.  If you do not then there is an in-app purchase.  The app tries to connect to your Royalbox and if it is able to unlocks the in-app purchase automatically.
 
 # ROYALBOX
-Watch - BBC, iTV, ABC iView, SBS OnDemand.
+Watch - BBC, iTV, ABC iView, SBS OnDemand with the built in channles like Roku.  What's better is that you can use it like a Chromecast and cast all shows that are supported by youtube-dl (for a list of supported sites https://ytdl-org.github.io/youtube-dl/supportedsites.html)
 Build and sell your own Raspberry Pi based streaming device.  Sell your own SD card loaded to convert any Raspberry Pi into a Chromecast/Roku like streaming device.  Or build your own Raspberry Pi CPU with pre-loaded software to use as a streaming stick.  With Headless setup (No keyboard or mouuse required to setup your streaming device) you can simply plug it in your TV and a use the on-screen configuration guide to setup. 
 
 -------------------------------------------------------------------------------------------------------------------------
@@ -215,3 +218,4 @@ Or you add them manually
 ```
 
 Now reboot and if everything goes smoothly you can proceed with a headless setup for your Raspberry Pi (Royalbox).
+
