@@ -111,14 +111,19 @@ sudo newfs_msdos -F 16 /dev/disk2
 Step 4. Restore from a Cloned Disc Image
 Locate the disc image, dmg, that you previously cloned. My example assumes that the dmg is on the Desktop. In Terminal, enter the following command ensuring that you identify the correct destination disc, in my example it’s /dev/disk2.
 ```
-sudo dd if=~/Desktop/Royalbox.dmg of=/dev/disk2
+sudo dd if=~/Desktop/Royalbox.img of=/dev/disk2
 ```
 
-Remember to do a
+Put the microSD into your Raspberry Pi with a keyboard attached.  When you get to the headless setup screen it the "options" (between the ctrl and alt keys) and that will bring up the startup menu, use the arrows keys to open up a Terminal window and the follow:
+```
+chmod +x -R /home/pi/blissflixx/*
+```
+
+Now on the termianl window expand the file system
 ```
 sudo raspi-config
 ```
-and expand the file system in the Advanced Option to get your full 16 GB back.
+and expand the file system in the Advanced Option to get your full 16 GB back.  Now reboot and your Pi is ready to start streaming.
 
 
 
