@@ -1,29 +1,29 @@
-<a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/Royalbox/raw/master/var/www/html/img/royalbox-logo-color-horiz-light.png" /></a>
-<p align="center"><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png" width="250" /></a></p>
-<p align="center"><a href="https://play.google.com/store/apps/details?id=com.gplexdb.royalboxremote"><img src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" width="250" /><a></p>
-<p align="center"><a href="https://chrome.google.com/webstore/detail/royalbox/ifjhhhigdmmmlhppajdjifeeelodmang"><img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png"></a></p>
+<p><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/Royalbox/raw/master/var/www/html/img/royalbox-logo-color-horiz-light.png" /></a></p>
 
-# ROYALBOX
-Watch geo-restricted channels like BBC, iTV, ABC iView, SBS OnDemand with the built in channles like Roku.  What's better is that you can use it like a Chromecast and cast all shows that are supported by youtube-dl (for a list of supported sites https://ytdl-org.github.io/youtube-dl/supportedsites.html)
-Build and sell your own Raspberry Pi based streaming device.  Sell your own SD card loaded to convert any Raspberry Pi into a Chromecast/Roku like streaming device.  Or build your own Raspberry Pi CPU with pre-loaded software to use as a streaming stick.  With Headless setup (No keyboard or mouuse required to setup your streaming device) you can simply plug it in your TV and a use the on-screen configuration guide to setup. 
-Royalbox Remote App for iOS allows for unlimited streaming if you have a Royalbox.  If you do not then there is an in-app purchase.  The app tries to connect to your Royalbox and if it is able to unlocks the in-app purchase automatically.
-Chrome and Android apps allow for casting of all youtube-dl supported websites.  You can use your mobile webrowser to watch/cast the Royalbox channels.
+[![Android app on Google Play](https://developer.android.com/images/brand/en_app_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=com.gplexdb.royalboxremote)
+[![iOS app on App Store]()https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png](https://itunes.apple.com/app/royalbox-control-center-home/id1450861330)
+[![Extension for Chrome](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/royalbox/ifjhhhigdmmmlhppajdjifeeelodmang)
+
+# ROYALBOX - SUPPORTED SITES
+Casting like Chromecast - Works with all youtube-dl supported websites: http://rg3.github.io/youtube-dl/supportedsites.html (ABC, NBC, CBS, YouTube, etc...)
+Built in Channels like Roku - For geo-restricted channels like BBC, iTV, ABC iView, SBS On Demand
+
+Headless setup (No keyboard or mouuse required to setup your streaming device) you can simply plug it in your TV and a use the on-screen configuration guide to setup. 
+
+Royalbox Remote App for iOS allows to stream any video you can watch on you iOS device to your Royalbox TV (Android version does not have this feature yet)
 
 -------------------------------------------------------------------------------------------------------------------------
 # PRE-CONFIGURED SD CARD or RASPBERRY PI A+
 
-You can purchase a pre-configured SD CARD to plug into your own Raspberry Pi that you own or just buy a pre-configure CPU from our online store.
-<p align="left">
-<a href="https://www.amazon.com/dp/B07RWFQMKY?ref=myi_title_dp/">Pre-configured MicroSD Card<img src="https://royalbox.tv/wp-content/uploads/2019/05/micro-sd-large_1024x1024@2x-324x324.png" /></a>
-</p>
-<p alight="left">
-<a href="https://www.amazon.com/dp/B07RWPKFK6?ref=myi_title_dp/">Pre-configure Raspoberry PiA+<img src="https://royalbox.tv/wp-content/uploads/2019/02/royalbox_pi_a_1-324x324.png" /></a>
-</p>
+You can get a preloaded 16GB microSDi card to plug into your own Raspberry Pi that you own or even get pre-configure Raspberry Pi A+ with a 16GB microSD card.
+
+[!(Preloaded microSD card](https://royalbox.tv/wp-content/uploads/2019/05/micro-sd-large_1024x1024@2x-324x324.png)](https://www.amazon.com/dp/B07RWFQMKY?ref=myi_title_dp)
+[!(Preloaded Raspberry Pi A+](https://royalbox.tv/wp-content/uploads/2019/02/royalbox_pi_a_1-324x324.png)](https://www.amazon.com/dp/B07RWPKFK6?ref=myi_title_dp))
 
 -------------------------------------------------------------------------------------------------------------------------
 # PREREQUISITES
 
- - Raspberry Pi A+, B+, ZeroW with at least 16Gb SD card running Raspbian. 
+ - Raspberry Pi A+, B+, ZeroW with at least 16Gb SD card running Raspbian. ZeroW is not recommended. 
  - Wifi connection.
  - Television plugged into Raspberry Pi.
  - Computer, tablet or smartphone for controlling server.
@@ -34,7 +34,7 @@ You can purchase a pre-configured SD CARD to plug into your own Raspberry Pi tha
 The project is built on 3 other projects from Github and some additional customization for the purpose of creating the Royalbox.
 
 Streaming Engine - https://github.com/blissland/blissflixx
-**NOTE:** The Royalbox is meant to bypass geo-restrictions.  Which is why this repo has 4 channels currently.  You can still use iPhone app to cast any web video to your Royalbox connected TV.  If you want additional channels go the blissflix repo and you can add those channels as well.  Blissflixx also has user plugin channels that may or may not work still but you can use them as well.
+**NOTE:** Not all the channels from Blissflixx were added
 
 Wifi Configuration - https://github.com/billz/raspap-webgui
 This is used for the headless setup.  No need to have a keyboard or mouse.  You will connect to the Royalbox Ad-hock wireless network and setup your wifi connection
