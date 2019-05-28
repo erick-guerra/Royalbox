@@ -4,12 +4,12 @@
 <a href="https://play.google.com/store/apps/details?id=com.gplexdb.royalboxremote"><img src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" width="206"/><a>
 <a href="https://chrome.google.com/webstore/detail/royalbox/ifjhhhigdmmmlhppajdjifeeelodmang"><img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png" width="206"></a></p>
 
-# ROYALBOX - SUPPORTED SITES
+# ROYALBOX 
 Casting like Chromecast - Works with all youtube-dl supported websites: http://rg3.github.io/youtube-dl/supportedsites.html (ABC, NBC, CBS, YouTube, etc...)
 
-Built in Channels like Roku - For geo-restricted channels like BBC, iTV, ABC iView, SBS On Demand
+Built in Channels like Roku - Bypass geo-restricted channels like BBC, iTV, ABC iView, SBS On Demand
 
-Headless setup (No keyboard or mouuse required to setup your streaming device) you can simply plug it in your TV and a use the on-screen configuration guide to setup. 
+Headless setup (No keyboard or mouse required to setup your streaming device) you can simply plug it in your TV and a use the on-screen configuration guide to setup. 
 
 Royalbox Remote App for iOS allows to stream any video you can watch on you iOS device to your Royalbox TV (Android version does not have this feature yet)
 
