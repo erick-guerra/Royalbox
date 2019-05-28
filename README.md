@@ -114,11 +114,7 @@ Locate the disc image, dmg, that you previously cloned. My example assumes that 
 sudo dd if=~/Desktop/Royalbox.img of=/dev/disk2
 ```
 
-Put the microSD into your Raspberry Pi with a keyboard attached.  When you get to the headless setup screen it the "options" (between the ctrl and alt keys) and that will bring up the startup menu, use the arrows keys to open up a Terminal window and the follow:
-```
-chmod +x -R /home/pi/blissflixx/*
-```
-
+Put the microSD into your Raspberry Pi with a keyboard attached.  When you get to the headless setup screen it the "options" (between the ctrl and alt keys) and that will bring up the startup menu, use the arrows keys to open up a Terminal window.
 Now on the termianl window expand the file system
 ```
 sudo raspi-config
