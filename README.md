@@ -1,8 +1,8 @@
 <p><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/Royalbox/raw/master/var/www/html/img/royalbox-logo-color-horiz-light.png" /></a></p>
 
-[![Android app on Google Play](https://www.github.com/omody/Royalbox/raw/master/en_app_rgb_wo_60.png =206x58)](https://play.google.com/store/apps/details?id=com.gplexdb.royalboxremote)
-[![iOS app on App Store](https://www.github.com/omody/Royalbox/raw/master/app-store-badge.png =206x58)](https://itunes.apple.com/app/royalbox-control-center-home/id1450861330)
-[![Extension for Chrome](https://www.github.com/omody/Royalbox/raw/master/ChromeWebStore_BadgeWBorder_v2_206x58.png =206x58)](https://chrome.google.com/webstore/detail/royalbox/ifjhhhigdmmmlhppajdjifeeelodmang)
+[![Android app on Google Play](https://www.github.com/omody/Royalbox/raw/master/en_app_rgb_wo_60.png){:height="58px" width="206px"}](https://play.google.com/store/apps/details?id=com.gplexdb.royalboxremote)
+[![iOS app on App Store](https://www.github.com/omody/Royalbox/raw/master/app-store-badge.png){:height="58px" width="206px"}](https://itunes.apple.com/app/royalbox-control-center-home/id1450861330)
+[![Extension for Chrome](https://www.github.com/omody/Royalbox/raw/master/ChromeWebStore_BadgeWBorder_v2_206x58.png){:height="58px" width="206px"}](https://chrome.google.com/webstore/detail/royalbox/ifjhhhigdmmmlhppajdjifeeelodmang)
 
 # ROYALBOX - SUPPORTED SITES
 Casting like Chromecast - Works with all youtube-dl supported websites: http://rg3.github.io/youtube-dl/supportedsites.html (ABC, NBC, CBS, YouTube, etc...)
@@ -18,8 +18,8 @@ Royalbox Remote App for iOS allows to stream any video you can watch on you iOS 
 
 You can get a preloaded 16GB microSD card to plug into your own Raspberry Pi that you own or even get pre-configure Raspberry Pi A+ with a 16GB microSD card.
 
-[![Preloaded microSD card](https://www.github.com/omody/Royalbox/raw/master/micro-sd-large.png |width=60)](https://www.amazon.com/dp/B07RWFQMKY?ref=myi_title_dp)
-[![Preloaded Raspberry Pi A+](https://www.github.com/omody/Royalbox/raw/master/royalbox_pi_a_1-324x324.png |width=60)](https://www.amazon.com/dp/B07RWPKFK6?ref=myi_title_dp)
+[![Preloaded microSD card](https://www.github.com/omody/Royalbox/raw/master/micro-sd-large.png){:height="58px" width="206px"}](https://www.amazon.com/dp/B07RWFQMKY?ref=myi_title_dp)
+[![Preloaded Raspberry Pi A+](https://www.github.com/omody/Royalbox/raw/master/royalbox_pi_a_1-324x324.png){:height="58px" width="206px"}](https://www.amazon.com/dp/B07RWPKFK6?ref=myi_title_dp)
 
 -------------------------------------------------------------------------------------------------------------------------
 # PREREQUISITES
