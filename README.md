@@ -1,8 +1,8 @@
 <p><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/Royalbox/raw/master/var/www/html/img/royalbox-logo-color-horiz-light.png" /></a></p>
 
-[![Android app on Google Play]<img src='en_app_rgb_wo_60.png' width=60 height=206/>](https://play.google.com/store/apps/details?id=com.gplexdb.royalboxremote)
-[![iOS app on App Store](app-store-badge.png){:height="58px" width="206px"}](https://itunes.apple.com/app/royalbox-control-center-home/id1450861330)
-[![Extension for Chrome](ChromeWebStore_BadgeWBorder_v2_206x58.png){:height="58px" width="206px"}](https://chrome.google.com/webstore/detail/royalbox/ifjhhhigdmmmlhppajdjifeeelodmang)
+<p><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png" height="58" width="206" /></a>
+<a href="https://play.google.com/store/apps/details?id=com.gplexdb.royalboxremote"><img src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" width="206" height="58" /><a>
+<a href="https://chrome.google.com/webstore/detail/royalbox/ifjhhhigdmmmlhppajdjifeeelodmang"><img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png" width="206" height="60"></a></p>
 
 # ROYALBOX - SUPPORTED SITES
 Casting like Chromecast - Works with all youtube-dl supported websites: http://rg3.github.io/youtube-dl/supportedsites.html (ABC, NBC, CBS, YouTube, etc...)
