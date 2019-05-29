@@ -172,14 +172,14 @@ $screen_status = (stristr(shell_exec('sudo /usr/bin/tvservice -s'), 'TV is off')
 		    background: #f3f2f0;
 	    }
 	    a, h4, .content-group h4 {
-		    color: #e6894c;
+		    color: #12b2e6;
 	    }
 	    .btn-primary {
 		    border: 0;
-		    background: #e6894b;
+		    background: #0b7293;
 		}
 		.btn-primary:hover {
-		    background: #ed6b1d;
+		    background: #12b2e6;
 		    color: #fff;
 		}
 		.cover {
@@ -273,7 +273,7 @@ $screen_status = (stristr(shell_exec('sudo /usr/bin/tvservice -s'), 'TV is off')
 		  font-size: 12px;
 		}
 		input.toggle-default:checked + label:before {
-			background-color: #e6894b;
+			background-color: #0b7293;
 			/*content: "\e013";*/
 			content: "ON";
 			color: #fff;
@@ -289,7 +289,7 @@ $screen_status = (stristr(shell_exec('sudo /usr/bin/tvservice -s'), 'TV is off')
 		  transition: margin 0.1s, background 0.1s;
 		}
 		input.toggle-default:checked + label {
-		  background-color: #e6894b;
+		  background-color: #0b7293;
 		}
 		input.toggle-default:checked + label:after {
 		  margin-left: 32px;
