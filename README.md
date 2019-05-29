@@ -1,4 +1,4 @@
-<p><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/Royalbox/raw/master/var/www/html/img/royalbox-logo-color-horiz-light.png" width="350" /></a></p>
+<p align="center"><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/Royalbox/raw/master/var/www/html/img/royalbox-logo-color-horiz-light.png" width="350" /></a></p>
 
 <p><a href="https://itunes.apple.com/app/royalbox-control-center-home/id1450861330"><img src="https://github.com/omody/GitHawk/blob/master/images/app-store-badge.png" width="206" /></a>
 <a href="https://play.google.com/store/apps/details?id=com.gplexdb.royalboxremote"><img src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" width="206"/><a>
