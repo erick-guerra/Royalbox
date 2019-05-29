@@ -82,7 +82,7 @@ $serial_num = trim(file_get_contents('/var/www/serial_num.txt'));
 			  </div>
 			  <div <?php echo ($is_connected) ? 'style="display:none"' : '' ?>>
 				  
-				  <img src="/img/step1.png" style="max-width:600px;"><br/><br/><br/><br/>
+				  <img src="/img/step1.png" style="max-width:200px;"><br/><br/><br/><br/>
 				  
 				  <div class="text-left lead" style="line-height: 2em;">
 			      <ol>
@@ -97,7 +97,7 @@ $serial_num = trim(file_get_contents('/var/www/serial_num.txt'));
 	          
 	          <div  <?php echo (!$is_connected) ? 'style="display:none"' : '' ?>>
 		          
-		          <img src="/img/step2.png" style="max-width:600px;"><br/><br/><br/><br/>
+		          <img src="/img/step2.png" style="max-width:200px;"><br/><br/><br/><br/>
 		          
 		         
 		          <div class="lead" style="line-height: 2em;">
