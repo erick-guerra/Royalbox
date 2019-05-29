@@ -16,7 +16,7 @@ Royalbox Remote App for iOS allows to stream any video you can watch on you iOS 
 -------------------------------------------------------------------------------------------------------------------------
 # PRE-CONFIGURED SD CARD or RASPBERRY PI A+
 
-You can get a preloaded 16GB microSD card to plug into your own Raspberry Pi that you own or even get pre-configure Raspberry Pi A+ with a 16GB microSD card.
+You can get a preloaded 16GB microSD card to plug into your own Raspberry Pi that you already own or even get pre-configured Raspberry Pi A+ with a preloaded 16GB microSD card (also includes an HDMI cable, power supply, setup instructions) from me.  Either of those would be a great help in continuing work on this project.
 
 <p>
 <a href="https://www.amazon.com/dp/B07RWFQMKY?ref=myi_title_dp/">Pre-configured MicroSD Card<img src="https://royalbox.tv/wp-content/uploads/2019/05/micro-sd-large_1024x1024@2x-324x324.png" width="200"/></a>
@@ -37,7 +37,7 @@ You can get a preloaded 16GB microSD card to plug into your own Raspberry Pi tha
 The project is built on 3 other projects from Github and some additional customization for the purpose of creating the Royalbox.
 
 Streaming Engine - https://github.com/blissland/blissflixx
-**NOTE:** Not all the channels from Blissflixx were added
+**NOTE:** Not all the channels from Blissflixx were not added.
 
 Wifi Configuration - https://github.com/billz/raspap-webgui
 This is used for the headless setup.  No need to have a keyboard or mouse.  You will connect to the Royalbox Ad-hock wireless network and setup your wifi connection
