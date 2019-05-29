@@ -71,6 +71,7 @@ This code was used to add similar functionality to able to send youtube-dl suppo
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_cast2_iphone.png" height="350" />
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_popup_iphone.png" height="350" />
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_remote_iphone.png" height="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_remote.png" height="350" />
 </p>
 
 **CASTING TO TV CHROME**
@@ -80,6 +81,7 @@ This code was used to add similar functionality to able to send youtube-dl suppo
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_channels_mac.png" width="350" />
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_itv_mac.png" width="350" />
 <img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/royalbox_sbs_mac.png" width="350" />
+<img src="https://github.com/omody/Royalbox/raw/master/home/pi/Pictures/chrome_extension.png" width="350" />
 </p>
 
 -------------------------------------------------------------------------------------------------------------------------
