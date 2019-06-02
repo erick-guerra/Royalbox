@@ -63,7 +63,7 @@ class OmxplayerProcess3(ExternalProcess):
     #cherrypy.log("OMXPROCESS: " + line)
     while True:
       #line = self._readline(_START_TIMEOUT)
-      time.sleep(5)
+      time.sleep(3)
       line = os.popen(_DBUS_PATH + " status &").read()
       #cherrypy.log("OMXPROCESS: " + line)
       if line.startswith('have a nice day'):
